@@ -1,184 +1,668 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wallago Collection | Batik Clay Perak</title>
-    <!-- Tailwind CSS CDN -->
+    <title>MAISON VÈNE | Official Lookbook & IG Showcase</title>
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Official Instagram Embed Script -->
+    <script async src="https://www.instagram.com/embed.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        luxury: {
+                            50: '#FAF8F5',
+                            100: '#F4EFEA',
+                            200: '#E2D6C8',
+                            300: '#C5B29D',
+                            700: '#2C2728',
+                            800: '#1D1A1B',
+                            900: '#121011',
+                            accent: '#D4AF37',
+                            accentHover: '#B89528'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Cormorant Garamond', 'serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
     <style>
-        body { font-family: 'Inter', sans-serif; }
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #121011;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #D4AF37;
+            border-radius: 3px;
+        }
+        .img-zoom {
+            transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+        .group:hover .img-zoom {
+            transform: scale(1.07);
+        }
+        .instagram-media {
+            background: #1D1A1B !important;
+            border: 1px solid #2C2728 !important;
+            border-radius: 12px !important;
+            margin: 0 auto !important;
+            min-width: 100% !important;
+            max-width: 100% !important;
+        }
     </style>
 </head>
-<body class="bg-stone-50 text-stone-800 antialiased">
+<body class="bg-luxury-900 text-luxury-100 font-sans antialiased selection:bg-luxury-accent selection:text-black">
 
-    <!-- Navbar -->
-    <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-stone-200">
-        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-            <span class="font-bold text-sm md:text-base tracking-wider text-amber-900">WALLAGO COLLECTION</span>
-            <a href="https://wa.me/60104547516?text=Hi%2C%20I%20am%20interested%20in%20ordering%20from%20Wallago%20Collection!" target="_blank" class="bg-amber-800 hover:bg-amber-900 text-white px-4 py-2 rounded-full text-sm font-medium transition">
-                Order via WhatsApp
+    <!-- Top Announcement Bar -->
+    <div class="bg-luxury-accent text-luxury-900 text-xs tracking-widest font-semibold py-2.5 px-4 text-center uppercase flex items-center justify-center gap-2">
+        <span>Official Instagram Embedded Lookbook</span>
+        <span>&bull;</span>
+        <span>Showcase & Custom Inquiries via WhatsApp</span>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="sticky top-0 z-40 bg-luxury-900/95 backdrop-blur-md border-b border-luxury-800 transition-all duration-300" id="mainHeader">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            
+            <!-- Mobile Toggle -->
+            <button id="mobileMenuBtn" class="lg:hidden text-luxury-100 hover:text-luxury-accent focus:outline-none p-2" aria-label="Toggle Menu">
+                <i class="fa-solid fa-bars text-xl"></i>
+            </button>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden lg:flex items-center gap-8 text-xs tracking-[0.2em] uppercase font-medium">
+                <a href="#ig-embeds" class="hover:text-luxury-accent transition-colors py-1">Instagram Lookbook</a>
+                <a href="#gallery" class="hover:text-luxury-accent transition-colors py-1">Multi-Style Showcase</a>
+                <a href="#story" class="hover:text-luxury-accent transition-colors py-1">Atelier Story</a>
+                <a href="#contact" class="hover:text-luxury-accent transition-colors py-1">Book Consultation</a>
+            </nav>
+
+            <!-- Brand Logo -->
+            <a href="#" class="text-2xl sm:text-3xl font-serif tracking-widest font-bold text-center text-luxury-100 uppercase">
+                MAISON <span class="text-luxury-accent font-normal italic">VÈNE</span>
             </a>
+
+            <!-- Social & WhatsApp Quick Action -->
+            <div class="flex items-center gap-4">
+                <a href="https://instagram.com" target="_blank" class="hover:text-luxury-accent transition-colors p-2 text-lg" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <button onclick="openWhatsApp('General IG Portfolio Inquiry')" class="hidden sm:inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white text-xs tracking-widest uppercase px-4 py-2 rounded-full font-semibold transition-all shadow-md">
+                    <i class="fa-brands fa-whatsapp text-sm"></i>
+                    <span>Inquire on WhatsApp</span>
+                </button>
+            </div>
         </div>
-    </nav>
+
+        <!-- Mobile Drawer -->
+        <div id="mobileMenu" class="hidden lg:hidden bg-luxury-900 border-b border-luxury-800 px-6 py-6 transition-all">
+            <div class="flex flex-col gap-4 text-xs tracking-widest uppercase font-medium">
+                <a href="#ig-embeds" class="mobile-link hover:text-luxury-accent transition-colors py-1">Instagram Lookbook</a>
+                <a href="#gallery" class="mobile-link hover:text-luxury-accent transition-colors py-1">Multi-Style Showcase</a>
+                <a href="#story" class="mobile-link hover:text-luxury-accent transition-colors py-1">Atelier Story</a>
+                <a href="#contact" class="mobile-link hover:text-luxury-accent transition-colors py-1">Book Consultation</a>
+                <button onclick="openWhatsApp('General IG Portfolio Inquiry')" class="w-full mt-2 bg-emerald-600 text-white text-xs tracking-widest uppercase py-3 rounded font-semibold flex items-center justify-center gap-2">
+                    <i class="fa-brands fa-whatsapp text-base"></i> Chat on WhatsApp
+                </button>
+            </div>
+        </div>
+    </header>
 
     <!-- Hero Section -->
-    <section class="max-w-6xl mx-auto px-6 py-16 md:py-24 grid md:grid-cols-2 gap-12 items-center">
-        <div>
-            <span class="inline-block bg-amber-100 text-amber-900 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider mb-4">Batik Clay Perak • Since 2023</span>
-            <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-stone-900 leading-tight mb-6">
-                Authentic Batik Fabrics & Custom Tailoring.
+    <section class="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 bg-cover bg-center filter brightness-75 scale-105" 
+             style="background-image: url('https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=2000&q=80');">
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-t from-luxury-900 via-luxury-900/60 to-transparent"></div>
+
+        <div class="relative z-10 max-w-4xl mx-auto text-center px-4 py-20 flex flex-col items-center">
+            <span class="text-luxury-accent text-xs sm:text-sm tracking-[0.35em] font-medium uppercase mb-4 block">Official Instagram Integrated Atelier</span>
+            <h1 class="font-serif text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight text-white mb-6 leading-tight">
+                Designed on Instagram. Tailored for You.
             </h1>
-            <p class="text-lg text-stone-600 mb-8">
-                Explore our exclusive collection of traditional batik materials including Cotton Satin, Kain Primasima, and Cotton Poplin. Click any category below to view all available patterns.
+            <p class="text-luxury-200 text-sm sm:text-base md:text-lg max-w-2xl mb-10 font-light leading-relaxed">
+                Explore our live embedded Instagram posts, reels, and multi-style design series. Simply tap any design to consult directly with our lead tailor via WhatsApp.
             </p>
-            <div class="flex flex-col sm:flex-row gap-4">
-                <a href="https://wa.me/60104547516?text=Hi%2C%20I%20am%20interested%20in%20ordering%20Batik%20from%20Wallago%20Collection!" target="_blank" class="bg-amber-800 hover:bg-amber-900 text-white text-center px-8 py-3.5 rounded-xl font-semibold shadow-lg shadow-amber-900/20 transition">
-                    WhatsApp to Order
+
+            <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+                <a href="#ig-embeds" class="bg-luxury-accent text-luxury-900 hover:bg-luxury-100 font-semibold text-xs tracking-widest uppercase px-8 py-4 rounded transition-all text-center">
+                    View IG Lookbook
                 </a>
-                <a href="#catalog" class="border border-stone-300 hover:border-stone-400 text-stone-700 text-center px-6 py-3.5 rounded-xl font-semibold transition">
-                    View Catalog
-                </a>
-            </div>
-        </div>
-        <div class="bg-stone-200 rounded-2xl h-96 flex items-center justify-center text-stone-400 font-medium">
-            <img src="images/Business_card.png" class="w-full h-full object-cover rounded-2xl">
-        </div>
-    </section>
-
-    <!-- Features / Highlights -->
-    <section class="bg-white py-16 border-y border-stone-200">
-        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-8 text-center">
-            <div class="p-6">
-                <div class="w-12 h-12 bg-amber-50 text-amber-800 rounded-xl flex items-center justify-center mx-auto mb-4 font-bold text-xl">✨</div>
-                <h3 class="font-bold text-lg mb-2">Premium Materials</h3>
-                <p class="text-stone-600 text-sm">High-grade Cotton Satin, Primasima, and Poplin fabrics selected for lasting elegance.</p>
-            </div>
-            <div class="p-6">
-                <div class="w-12 h-12 bg-amber-50 text-amber-800 rounded-xl flex items-center justify-center mx-auto mb-4 font-bold text-xl">🎨</div>
-                <h3 class="font-bold text-lg mb-2">Traditional Motifs</h3>
-                <p class="text-stone-600 text-sm">Exquisite traditional patterns featuring rich earth and clay tones.</p>
-            </div>
-            <div class="p-6">
-                <div class="w-12 h-12 bg-amber-50 text-amber-800 rounded-xl flex items-center justify-center mx-auto mb-4 font-bold text-xl">📞</div>
-                <h3 class="font-bold text-lg mb-2">Direct Ordering</h3>
-                <p class="text-stone-600 text-sm">Fast and seamless customer inquiries straight through WhatsApp.</p>
+                <button onclick="openWhatsApp('Bespoke Custom Fitting')" class="border border-luxury-accent/60 text-luxury-accent hover:bg-luxury-accent hover:text-luxury-900 font-semibold text-xs tracking-widest uppercase px-8 py-4 rounded transition-all text-center backdrop-blur-sm flex items-center justify-center gap-2">
+                    <i class="fa-brands fa-whatsapp text-base"></i> Inquire Sizing via WhatsApp
+                </button>
             </div>
         </div>
     </section>
 
-    <!-- Catalog Section with Clickable Category Cards -->
-    <section id="catalog" class="max-w-6xl mx-auto px-6 py-20">
-        <div class="text-center mb-12">
-            <span class="text-amber-800 font-semibold text-xs uppercase tracking-widest bg-amber-100 px-3 py-1 rounded-full">Product Catalog</span>
-            <h2 class="text-3xl font-bold text-stone-900 mt-3 mb-3">Fabric Types & Pricing</h2>
-            <p class="text-stone-600">Click any card below to browse all pattern variants for that fabric.</p>
+    <!-- Section: Official Instagram Embedded Posts Grid (Option 3) -->
+    <section id="ig-embeds" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+        <div class="text-center mb-16">
+            <span class="text-luxury-accent text-xs tracking-widest uppercase block mb-2">Live Social Feed Integration</span>
+            <h2 class="font-serif text-3xl sm:text-5xl text-white font-semibold">Official Instagram Embedded Lookbook</h2>
+            <p class="text-luxury-300 text-xs sm:text-sm mt-3 max-w-2xl mx-auto">
+                Every post below is dynamically embedded directly from our official Instagram feed. Tap "Inquire Design on WhatsApp" under any post to ask about custom fitting, colors, or availability.
+            </p>
         </div>
-        
-        <div class="grid md:grid-cols-3 gap-8">
-            <!-- Cotton Satin Card -->
-            <a href="cotton-satin.html" class="bg-white rounded-2xl border border-stone-200 overflow-hidden shadow-sm flex flex-col justify-between hover:border-amber-800 transition block">
-                <div>
-                    <div class="bg-stone-200 h-64 flex items-center justify-center text-stone-400 font-medium">
-                        <img src="images/cotton-satin/cotton-satin-1.jpeg" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-6">
-                        <span class="text-xs font-bold text-amber-800 uppercase tracking-wider">Luxury Selection</span>
-                        <h3 class="font-bold text-xl text-stone-900 mt-1 mb-2">Cotton Satin</h3>
-                        <p class="text-stone-600 text-sm mb-4">Smooth texture with a subtle sheen, offering supreme comfort.</p>
-                        <div class="space-y-2 text-sm border-t border-stone-100 pt-4">
-                            <div class="flex justify-between text-stone-700">
-                                <span>2.5 Meters</span>
-                                <span class="font-semibold text-amber-900">RM 210</span>
-                            </div>
-                            <div class="flex justify-between text-stone-700">
-                                <span>3.0 Meters</span>
-                                <span class="font-semibold text-amber-900">RM 270</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="p-6 pt-0">
-                    <span class="w-full block bg-stone-900 text-white text-center py-3 rounded-xl font-medium text-sm">
-                        View All Patterns &rarr;
-                    </span>
-                </div>
-            </a>
 
-            <!-- Kain Primasima Card -->
-            <a href="primasima.html" class="bg-white rounded-2xl border border-stone-200 overflow-hidden shadow-sm flex flex-col justify-between hover:border-amber-800 transition block">
+        <!-- Grid of Official IG Embed Containers -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="igEmbedGrid">
+            
+            <!-- Instagram Embed Card 1 -->
+            <div class="bg-luxury-800/40 border border-luxury-800 rounded-2xl p-4 flex flex-col justify-between">
                 <div>
-                    <div class="bg-stone-200 h-64 flex items-center justify-center text-stone-400 font-medium">
-                        <img src="images/primasima/primasima-3.jpeg" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-6">
-                        <span class="text-xs font-bold text-amber-800 uppercase tracking-wider">Classic Weave</span>
-                        <h3 class="font-bold text-xl text-stone-900 mt-1 mb-2">Kain Primasima</h3>
-                        <p class="text-stone-600 text-sm mb-4">High-grade traditional cotton known for its durability and crisp feel.</p>
-                        <div class="space-y-2 text-sm border-t border-stone-100 pt-4">
-                            <div class="flex justify-between text-stone-700">
-                                <span>2.5 Meters</span>
-                                <span class="font-semibold text-amber-900">RM 150</span>
+                    <!-- Official Instagram Embed Blockquote -->
+                    <blockquote class="instagram-media" 
+                        data-instgrm-captioned 
+                        data-instgrm-permalink="https://www.instagram.com/p/C33A1R1Lg9X/" 
+                        data-instgrm-version="14">
+                        <div class="p-4 flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-luxury-accent/20 flex items-center justify-center text-luxury-accent">
+                                <i class="fa-brands fa-instagram text-xl"></i>
+                            </div>
+                            <div class="text-left">
+                                <span class="font-semibold text-white text-xs block">@maisonvene</span>
+                                <span class="text-[10px] text-luxury-300">View Look on Instagram</span>
                             </div>
                         </div>
-                    </div>
+                    </blockquote>
                 </div>
-                <div class="p-6 pt-0">
-                    <span class="w-full block bg-stone-900 text-white text-center py-3 rounded-xl font-medium text-sm">
-                        View All Patterns &rarr;
-                    </span>
+                <div class="mt-4 pt-4 border-t border-luxury-800">
+                    <h4 class="font-serif text-lg text-white font-medium mb-1">Aurelia Silk Drape Gown</h4>
+                    <p class="text-xs text-luxury-300 mb-3">Featured in our SS26 Milan Lookbook Reel.</p>
+                    <button onclick="openWhatsApp('Inquiry about Aurelia Silk Drape Gown (IG Post)')" 
+                            class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-xs uppercase tracking-widest py-3 rounded-lg transition-colors flex items-center justify-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-base"></i> Inquire Design on WhatsApp
+                    </button>
                 </div>
-            </a>
+            </div>
 
-            <!-- Cotton Poplin Card -->
-            <a href="poplin.html" class="bg-white rounded-2xl border border-stone-200 overflow-hidden shadow-sm flex flex-col justify-between hover:border-amber-800 transition block">
+            <!-- Instagram Embed Card 2 -->
+            <div class="bg-luxury-800/40 border border-luxury-800 rounded-2xl p-4 flex flex-col justify-between">
                 <div>
-                    <div class="bg-stone-200 h-64 flex items-center justify-center text-stone-400 font-medium">
-                        <!-- <img src="images/cotton-poplin.jpg" class="w-full h-full object-cover"> -->
-                        [ Cotton Poplin Photo ]
-                    </div>
-                    <div class="p-6">
-                        <span class="text-xs font-bold text-amber-800 uppercase tracking-wider">Breezy Style</span>
-                        <h3 class="font-bold text-xl text-stone-900 mt-1 mb-2">Cotton Poplin</h3>
-                        <p class="text-stone-600 text-sm mb-4">Lightweight and highly breathable, perfect for everyday tropical wear.</p>
-                        <div class="space-y-2 text-sm border-t border-stone-100 pt-4">
-                            <div class="flex justify-between text-stone-700">
-                                <span>2.5 Meters</span>
-                                <span class="font-semibold text-amber-900">RM 150</span>
+                    <!-- Official Instagram Embed Blockquote -->
+                    <blockquote class="instagram-media" 
+                        data-instgrm-captioned 
+                        data-instgrm-permalink="https://www.instagram.com/p/C21A9X2vx8Y/" 
+                        data-instgrm-version="14">
+                        <div class="p-4 flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-luxury-accent/20 flex items-center justify-center text-luxury-accent">
+                                <i class="fa-brands fa-instagram text-xl"></i>
+                            </div>
+                            <div class="text-left">
+                                <span class="font-semibold text-white text-xs block">@maisonvene</span>
+                                <span class="text-[10px] text-luxury-300">View Look on Instagram</span>
                             </div>
                         </div>
-                    </div>
+                    </blockquote>
                 </div>
-                <div class="p-6 pt-0">
-                    <span class="w-full block bg-stone-900 text-white text-center py-3 rounded-xl font-medium text-sm">
-                        View All Patterns &rarr;
-                    </span>
+                <div class="mt-4 pt-4 border-t border-luxury-800">
+                    <h4 class="font-serif text-lg text-white font-medium mb-1">Bespoke Italian Velvet Suit</h4>
+                    <p class="text-xs text-luxury-300 mb-3">Custom tailored double-breasted tuxedo.</p>
+                    <button onclick="openWhatsApp('Inquiry about Bespoke Italian Velvet Suit (IG Post)')" 
+                            class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-xs uppercase tracking-widest py-3 rounded-lg transition-colors flex items-center justify-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-base"></i> Inquire Design on WhatsApp
+                    </button>
                 </div>
-            </a>
+            </div>
+
+            <!-- Instagram Embed Card 3 -->
+            <div class="bg-luxury-800/40 border border-luxury-800 rounded-2xl p-4 flex flex-col justify-between">
+                <div>
+                    <!-- Official Instagram Embed Blockquote -->
+                    <blockquote class="instagram-media" 
+                        data-instgrm-captioned 
+                        data-instgrm-permalink="https://www.instagram.com/p/C12A5M5y29Z/" 
+                        data-instgrm-version="14">
+                        <div class="p-4 flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-luxury-accent/20 flex items-center justify-center text-luxury-accent">
+                                <i class="fa-brands fa-instagram text-xl"></i>
+                            </div>
+                            <div class="text-left">
+                                <span class="font-semibold text-white text-xs block">@maisonvene</span>
+                                <span class="text-[10px] text-luxury-300">View Look on Instagram</span>
+                            </div>
+                        </div>
+                    </blockquote>
+                </div>
+                <div class="mt-4 pt-4 border-t border-luxury-800">
+                    <h4 class="font-serif text-lg text-white font-medium mb-1">Pleated Minimalist Trench Coat</h4>
+                    <p class="text-xs text-luxury-300 mb-3">Behind-the-scenes fitting session post.</p>
+                    <button onclick="openWhatsApp('Inquiry about Pleated Minimalist Trench Coat (IG Post)')" 
+                            class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-xs uppercase tracking-widest py-3 rounded-lg transition-colors flex items-center justify-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-base"></i> Inquire Design on WhatsApp
+                    </button>
+                </div>
+            </div>
+
         </div>
     </section>
 
-    <!-- Final CTA Banner -->
-    <section class="bg-amber-900 text-stone-100 py-16">
-        <div class="max-w-4xl mx-auto px-6 text-center">
-            <h2 class="text-3xl font-bold mb-4">Looking for Custom Orders or More Patterns?</h2>
-            <p class="text-amber-200 mb-8 max-w-xl mx-auto">Get in touch directly with Normah via WhatsApp to explore more fabric options and secure your order.</p>
-            <a href="https://wa.me/60104547516?text=Hi%2C%20I%20would%20like%20to%20inquire%20about%20more%20batik%20patterns!" target="_blank" class="inline-block bg-white text-amber-900 hover:bg-stone-100 px-8 py-4 rounded-xl font-bold transition shadow-xl">
-                Chat with Normah (010-454 7516)
-            </a>
+    <!-- Multi-Style Design Portfolio & Lightbox Showcase -->
+    <section id="gallery" class="bg-luxury-800/20 py-24 border-t border-luxury-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="text-luxury-accent text-xs tracking-widest uppercase block mb-2">Interactive Multi-Angle Showcase</span>
+                <h2 class="font-serif text-3xl sm:text-5xl text-white font-semibold mb-4">Design Portfolio & Angles</h2>
+                <p class="text-luxury-300 text-xs sm:text-sm">Click any design to view multiple style variants, colors, and close-ups.</p>
+                
+                <!-- Filters -->
+                <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-4 mt-6" id="galleryFilter">
+                    <button onclick="filterGallery('all')" class="filter-btn active bg-luxury-accent text-luxury-900 border border-luxury-accent text-xs uppercase tracking-widest px-5 py-2 rounded-full font-semibold transition-all">All Designs</button>
+                    <button onclick="filterGallery('evening')" class="filter-btn text-luxury-200 border border-luxury-800 hover:border-luxury-accent text-xs uppercase tracking-widest px-5 py-2 rounded-full font-medium transition-all">Evening Gowns</button>
+                    <button onclick="filterGallery('bespoke')" class="filter-btn text-luxury-200 border border-luxury-800 hover:border-luxury-accent text-xs uppercase tracking-widest px-5 py-2 rounded-full font-medium transition-all">Bespoke Tailoring</button>
+                    <button onclick="filterGallery('casual')" class="filter-btn text-luxury-200 border border-luxury-800 hover:border-luxury-accent text-xs uppercase tracking-widest px-5 py-2 rounded-full font-medium transition-all">Resort & Outerwear</button>
+                </div>
+            </div>
+
+            <!-- Dynamic Multi-Style Cards Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" id="styleGalleryGrid">
+                <!-- Injected via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Brand Philosophy Brief -->
+    <section id="story" class="py-20 bg-luxury-800/30 border-y border-luxury-800">
+        <div class="max-w-5xl mx-auto px-4 text-center">
+            <span class="text-luxury-accent text-xs tracking-widest uppercase block mb-3">Atelier Standards</span>
+            <h2 class="font-serif text-3xl sm:text-5xl text-white font-medium mb-6">No Mass Production. Pure Craftsmanship.</h2>
+            <p class="text-luxury-200 text-sm sm:text-base leading-relaxed font-light max-w-3xl mx-auto">
+                MAISON VÈNE focuses exclusively on bespoke custom orders, individual client consultations, and tailored silhouettes. By connecting our official Instagram feed directly with WhatsApp inquiries, you communicate directly with our head master tailor to bring your design vision to reality.
+            </p>
+        </div>
+    </section>
+
+    <!-- Consultation & Custom Fitting Inquiry Form -->
+    <section id="contact" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+        <div class="bg-luxury-800/40 border border-luxury-800 rounded-2xl p-8 sm:p-12 lg:p-16">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                
+                <!-- Info Column -->
+                <div class="flex flex-col justify-between">
+                    <div>
+                        <span class="text-luxury-accent text-xs tracking-widest uppercase block mb-3">Direct Contact</span>
+                        <h2 class="font-serif text-3xl sm:text-5xl text-white font-bold mb-6 leading-tight">
+                            Schedule Your Bespoke Fitting
+                        </h2>
+                        <p class="text-luxury-300 text-sm sm:text-base mb-8 leading-relaxed font-light">
+                            Fill out your preferred fitting style or custom requirements below. Your inputs will be auto-formatted and sent directly to our WhatsApp support team for immediate assistance.
+                        </p>
+                    </div>
+
+                    <div class="space-y-4 my-6">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full bg-emerald-600/10 border border-emerald-500/30 flex items-center justify-center text-emerald-500">
+                                <i class="fa-brands fa-whatsapp text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-semibold text-white">Instant WhatsApp Response</h4>
+                                <p class="text-xs text-luxury-300">Consult on fabrics, custom sizing, and event deadlines</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full bg-luxury-accent/10 border border-luxury-accent/30 flex items-center justify-center text-luxury-accent">
+                                <i class="fa-solid fa-scissors text-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-semibold text-white">IG Style Reproduction</h4>
+                                <p class="text-xs text-luxury-300">Send us any photo or Instagram Reel link for reference</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button onclick="openWhatsApp('Direct Fitting Consultation')" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-xs tracking-widest uppercase py-4 rounded-lg transition-all flex items-center justify-center gap-2 shadow-lg">
+                        <i class="fa-brands fa-whatsapp text-lg"></i> Open Direct WhatsApp Consultation
+                    </button>
+                </div>
+
+                <!-- Custom WhatsApp Pre-fill Form -->
+                <form onsubmit="handleInquiryRedirect(event)" class="bg-luxury-900 border border-luxury-800 p-6 sm:p-8 rounded-xl space-y-4">
+                    <h3 class="font-serif text-2xl text-white mb-2">Request Custom Fitting</h3>
+                    <p class="text-xs text-luxury-300 mb-4">This form instantly prepares a tailored message for our WhatsApp line.</p>
+                    
+                    <div>
+                        <label class="block text-xs uppercase tracking-widest text-luxury-300 mb-1">Your Full Name *</label>
+                        <input type="text" id="inquiryName" required placeholder="e.g. Sophia Loren" class="w-full bg-luxury-800/50 border border-luxury-800 rounded p-3 text-sm text-white focus:outline-none focus:border-luxury-accent transition-colors">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs uppercase tracking-widest text-luxury-300 mb-1">WhatsApp / Contact Number *</label>
+                        <input type="tel" id="inquiryPhone" required placeholder="+1 (555) 000-0000" class="w-full bg-luxury-800/50 border border-luxury-800 rounded p-3 text-sm text-white focus:outline-none focus:border-luxury-accent transition-colors">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs uppercase tracking-widest text-luxury-300 mb-1">Style / Instagram Post Reference</label>
+                        <select id="inquiryDesign" class="w-full bg-luxury-800/50 border border-luxury-800 rounded p-3 text-sm text-luxury-200 focus:outline-none focus:border-luxury-accent transition-colors">
+                            <option value="Aurelia Silk Drape Gown">Aurelia Silk Drape Gown (IG Lookbook)</option>
+                            <option value="Bespoke Italian Velvet Suit">Bespoke Italian Velvet Suit</option>
+                            <option value="Pleated Minimalist Trench Coat">Pleated Minimalist Trench Coat</option>
+                            <option value="Custom Event Outfit">Custom Event Outfit / Special Fitting</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs uppercase tracking-widest text-luxury-300 mb-1">Sizing or Customization Notes</label>
+                        <textarea id="inquiryMessage" rows="3" placeholder="Tell us your measurements, preferred color, or event date..." class="w-full bg-luxury-800/50 border border-luxury-800 rounded p-3 text-sm text-white focus:outline-none focus:border-luxury-accent transition-colors"></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full bg-luxury-accent text-luxury-900 font-semibold text-xs tracking-widest uppercase py-4 rounded hover:bg-luxury-100 transition-colors flex items-center justify-center gap-2">
+                        <span>Send to WhatsApp</span>
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </button>
+                </form>
+
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-stone-900 text-stone-400 py-12 text-center text-xs">
-        <div class="max-w-6xl mx-auto px-6 space-y-3">
-            <p class="font-bold text-stone-200 text-sm">Wallago Collection (Batik Clay Perak)</p>
-            <p>No. 283, Jalan TT2, Taman Tapah 2, 35000, Tapah, Perak</p>
-            <p>Contact: 010-454 7516 (Normah) | Email: wallagocollection@gmail.com</p>
-            <p class="pt-4 border-t border-stone-800">&copy; 2023 Wallago Collection by Wallago Arts. All rights reserved.</p>
+    <footer class="bg-luxury-900 border-t border-luxury-800 text-luxury-300 py-16 px-4 sm:px-6 lg:px-8 text-sm">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
+            <div>
+                <a href="#" class="text-2xl font-serif tracking-widest font-bold text-white uppercase block mb-4">
+                    MAISON <span class="text-luxury-accent font-normal italic">VÈNE</span>
+                </a>
+                <p class="text-xs leading-relaxed text-luxury-300">
+                    Official Instagram embedded showcase and custom tailored fashion portfolio. All client orders managed via WhatsApp.
+                </p>
+            </div>
+
+            <div>
+                <h4 class="text-white font-semibold uppercase tracking-widest text-xs mb-4">Explore</h4>
+                <ul class="space-y-2 text-xs">
+                    <li><a href="#ig-embeds" class="hover:text-luxury-accent transition-colors">IG Embed Feed</a></li>
+                    <li><a href="#gallery" class="hover:text-luxury-accent transition-colors">Multi-Style Showcase</a></li>
+                    <li><a href="#story" class="hover:text-luxury-accent transition-colors">Atelier Story</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-white font-semibold uppercase tracking-widest text-xs mb-4">WhatsApp Quick Inquiries</h4>
+                <ul class="space-y-2 text-xs">
+                    <li><a href="javascript:void(0)" onclick="openWhatsApp('Custom Measurement Guide')" class="hover:text-luxury-accent transition-colors">Sizing & Measurements</a></li>
+                    <li><a href="javascript:void(0)" onclick="openWhatsApp('Private Tailoring Booking')" class="hover:text-luxury-accent transition-colors">Book Private Tailor</a></li>
+                    <li><a href="javascript:void(0)" onclick="openWhatsApp('Fabric Selection')" class="hover:text-luxury-accent transition-colors">Fabric Swatches</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-white font-semibold uppercase tracking-widest text-xs mb-4">Follow Official Instagram</h4>
+                <p class="text-xs mb-3 text-luxury-300">Follow for daily studio updates and runway Reels.</p>
+                <a href="https://instagram.com" target="_blank" class="inline-flex items-center gap-2 text-xs text-luxury-accent font-semibold tracking-widest uppercase hover:underline">
+                    <i class="fa-brands fa-instagram text-base"></i> @maisonvene
+                </a>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto mt-12 pt-8 border-t border-luxury-800/60 flex flex-col sm:flex-row justify-between items-center text-xs gap-4">
+            <p>&copy; 2026 MAISON VÈNE. Official Instagram Embed Showcase.</p>
+            <div class="flex gap-6">
+                <a href="https://instagram.com" target="_blank" class="hover:text-luxury-accent"><i class="fa-brands fa-instagram text-base"></i></a>
+                <a href="javascript:void(0)" onclick="openWhatsApp('Footer Inquiry')" class="hover:text-luxury-accent"><i class="fa-brands fa-whatsapp text-base"></i></a>
+            </div>
         </div>
     </footer>
 
+    <!-- Multi-Style Lightbox Modal -->
+    <div id="designModal" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden flex items-center justify-center p-4 sm:p-6 overflow-y-auto">
+        <div class="bg-luxury-900 border border-luxury-800 rounded-2xl max-w-5xl w-full max-h-[90vh] overflow-y-auto relative p-6 sm:p-8 text-luxury-100">
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-luxury-300 hover:text-luxury-accent text-2xl p-2 z-10" aria-label="Close Modal">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+                
+                <!-- Main Image & Thumbnails -->
+                <div>
+                    <div class="relative h-[400px] sm:h-[500px] rounded-xl overflow-hidden bg-luxury-800 border border-luxury-800">
+                        <img id="modalMainImg" src="" alt="Design View" class="w-full h-full object-cover transition-all duration-300">
+                    </div>
+                    <div class="flex gap-3 mt-4 overflow-x-auto pb-2" id="modalThumbnails">
+                        <!-- Thumbnails injected dynamically -->
+                    </div>
+                </div>
+
+                <!-- Details & WhatsApp trigger -->
+                <div class="flex flex-col justify-between h-full space-y-6">
+                    <div>
+                        <span id="modalCategory" class="text-luxury-accent text-xs tracking-widest uppercase block mb-2 font-semibold"></span>
+                        <h3 id="modalTitle" class="font-serif text-3xl sm:text-4xl text-white font-semibold mb-3"></h3>
+                        <p id="modalDescription" class="text-luxury-300 text-sm leading-relaxed mb-6 font-light"></p>
+
+                        <div class="border-t border-luxury-800 pt-4 space-y-3">
+                            <h4 class="text-xs uppercase tracking-widest text-luxury-100 font-semibold">Multiple Styles & Options:</h4>
+                            <ul id="modalFeatures" class="text-xs text-luxury-300 space-y-1.5 list-disc pl-4">
+                                <!-- Feature items -->
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="border-t border-luxury-800 pt-6">
+                        <button id="modalWhatsAppBtn" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-xs tracking-widest uppercase py-4 rounded-lg transition-all flex items-center justify-center gap-2 shadow-lg">
+                            <i class="fa-brands fa-whatsapp text-lg"></i> Inquire This Design on WhatsApp
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating WhatsApp Widget with Action Menu -->
+    <div class="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3">
+        
+        <!-- Expanded Quick Options Popup -->
+        <div id="waMenu" class="hidden bg-luxury-900 border border-luxury-800 rounded-2xl p-4 shadow-2xl w-64 text-xs space-y-2 mb-2 backdrop-blur-md">
+            <div class="text-[10px] uppercase tracking-widest text-luxury-accent font-semibold border-b border-luxury-800 pb-2 mb-2">
+                WhatsApp Quick Inquiries
+            </div>
+            <button onclick="openWhatsApp('General Portfolio Inquiry')" class="w-full text-left p-2 rounded hover:bg-luxury-800 text-luxury-100 transition-colors flex items-center gap-2">
+                <i class="fa-brands fa-whatsapp text-emerald-500 text-base"></i>
+                <span>General Inquiry</span>
+            </button>
+            <button onclick="openWhatsApp('Custom Fitting & Tailoring')" class="w-full text-left p-2 rounded hover:bg-luxury-800 text-luxury-100 transition-colors flex items-center gap-2">
+                <i class="fa-solid fa-scissors text-luxury-accent text-base"></i>
+                <span>Custom Fitting & Tailoring</span>
+            </button>
+            <button onclick="openWhatsApp('Instagram Outfit Consultation')" class="w-full text-left p-2 rounded hover:bg-luxury-800 text-luxury-100 transition-colors flex items-center gap-2">
+                <i class="fa-brands fa-instagram text-pink-500 text-base"></i>
+                <span>IG Outfit Consultation</span>
+            </button>
+        </div>
+
+        <!-- Floating Button -->
+        <button onclick="toggleWaMenu()" 
+                class="bg-emerald-600 hover:bg-emerald-500 text-white rounded-full p-4 shadow-2xl flex items-center justify-center transition-all transform hover:scale-105"
+                aria-label="Toggle WhatsApp Menu">
+            <i class="fa-brands fa-whatsapp text-3xl"></i>
+        </button>
+    </div>
+
+    <!-- JavaScript Data & Operations -->
+    <script>
+        // Multi-Style Design Data
+        const designData = [
+            {
+                id: 'aurelia-gowns',
+                category: 'evening',
+                categoryLabel: 'Evening Gown',
+                title: 'Aurelia Draped Silk Gown',
+                desc: '100% pure Mulberry Silk evening gown featuring draped open-back detailing and hand-stitched lining.',
+                mainImg: 'https://images.unsplash.com/photo-1566174053879-31528523f8ae?auto=format&fit=crop&w=1000&q=80',
+                styles: [
+                    'https://images.unsplash.com/photo-1566174053879-31528523f8ae?auto=format&fit=crop&w=1000&q=80',
+                    'https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?auto=format&fit=crop&w=1000&q=80',
+                    'https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=1000&q=80'
+                ],
+                features: ['Multiple silk colorways available', 'Custom waist drape measurements', 'Hand-finished invisible hem']
+            },
+            {
+                id: 'midnight-suit',
+                category: 'bespoke',
+                categoryLabel: 'Bespoke Suit',
+                title: 'Midnight Velvet Double Blazer',
+                desc: 'Tailored sharp blazer from Italian velvet with silk-lined lapels and hand-padded shoulders.',
+                mainImg: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1000&q=80',
+                styles: [
+                    'https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1000&q=80',
+                    'https://images.unsplash.com/photo-1617137984095-74e4e5e3613f?auto=format&fit=crop&w=1000&q=80'
+                ],
+                features: ['Peak or Notch lapel choice', 'Monogrammed silk interior lining', 'Matching tailored trousers']
+            },
+            {
+                id: 'pleated-trench',
+                category: 'casual',
+                categoryLabel: 'Resort & Outerwear',
+                title: 'Pleated Oversized Trench Coat',
+                desc: 'High-density gabardine trench with back pleating and handcrafted horn buttons.',
+                mainImg: 'https://images.unsplash.com/photo-1551803091-e20673f15770?auto=format&fit=crop&w=1000&q=80',
+                styles: [
+                    'https://images.unsplash.com/photo-1551803091-e20673f15770?auto=format&fit=crop&w=1000&q=80',
+                    'https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=1000&q=80'
+                ],
+                features: ['Water-resistant gabardine', 'Storm flap styling', 'Custom sleeve & belt length']
+            }
+        ];
+
+        document.addEventListener('DOMContentLoaded', () => {
+            renderGallery('all');
+            processInstagramEmbeds();
+        });
+
+        // Trigger Instagram Embed Script Processing
+        function processInstagramEmbeds() {
+            if (window.instgrm && window.instgrm.Embeds) {
+                window.instgrm.Embeds.process();
+            }
+        }
+
+        // WhatsApp Direct Link Generator
+        function openWhatsApp(subject) {
+            const phoneNumber = "15550000000"; // Replace with real phone number
+            const text = encodeURIComponent(`Hi MAISON VÈNE! I'd like to inquire about: ${subject}`);
+            window.open(`https://wa.me/${phoneNumber}?text=${text}`, '_blank');
+        }
+
+        // Toggle Floating WhatsApp Menu
+        function toggleWaMenu() {
+            const menu = document.getElementById('waMenu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Gallery Filter Renderer
+        function renderGallery(filterCategory) {
+            const grid = document.getElementById('styleGalleryGrid');
+            const filtered = filterCategory === 'all' 
+                ? designData 
+                : designData.filter(d => d.category === filterCategory);
+
+            grid.innerHTML = filtered.map(item => `
+                <div class="bg-luxury-900 border border-luxury-800 rounded-xl overflow-hidden group flex flex-col justify-between">
+                    <div>
+                        <div class="relative h-96 overflow-hidden bg-luxury-800 cursor-pointer" onclick="openModal('${item.id}')">
+                            <img src="${item.mainImg}" alt="${item.title}" class="w-full h-full object-cover img-zoom">
+                            <span class="absolute top-4 left-4 bg-luxury-900/80 backdrop-blur-md border border-luxury-accent/30 text-luxury-accent text-[10px] tracking-widest uppercase px-3 py-1 rounded">
+                                ${item.categoryLabel}
+                            </span>
+                            <div class="absolute top-4 right-4 bg-luxury-900/80 text-luxury-100 text-xs px-2.5 py-1 rounded-full backdrop-blur-md border border-luxury-800">
+                                <i class="fa-solid fa-camera mr-1 text-luxury-accent"></i> ${item.styles.length} Views
+                            </div>
+                        </div>
+
+                        <div class="p-6">
+                            <h3 class="font-serif text-xl text-white font-medium cursor-pointer hover:text-luxury-accent" onclick="openModal('${item.id}')">${item.title}</h3>
+                            <p class="text-xs text-luxury-300 mt-2 line-clamp-2 font-light">${item.desc}</p>
+                        </div>
+                    </div>
+
+                    <div class="px-6 pb-6 space-y-2">
+                        <button onclick="openModal('${item.id}')" class="w-full border border-luxury-800 text-luxury-200 hover:border-luxury-accent hover:text-luxury-accent text-xs uppercase tracking-widest py-3 rounded transition-colors">
+                            Explore Multi-Angle Gallery
+                        </button>
+                        <button onclick="openWhatsApp('Inquiry about design: ${item.title}')" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-xs uppercase tracking-widest py-3 rounded transition-colors flex items-center justify-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-base"></i> Inquire via WhatsApp
+                        </button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function filterGallery(category) {
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.remove('active', 'bg-luxury-accent', 'text-luxury-900');
+                btn.classList.add('text-luxury-200', 'border-luxury-800');
+            });
+            event.target.classList.add('active', 'bg-luxury-accent', 'text-luxury-900');
+            event.target.classList.remove('text-luxury-200', 'border-luxury-800');
+            renderGallery(category);
+        }
+
+        // Lightbox Functions
+        function openModal(designId) {
+            const item = designData.find(d => d.id === designId);
+            if (!item) return;
+
+            document.getElementById('modalCategory').textContent = item.categoryLabel;
+            document.getElementById('modalTitle').textContent = item.title;
+            document.getElementById('modalDescription').textContent = item.desc;
+            document.getElementById('modalMainImg').src = item.styles[0];
+
+            const thumbContainer = document.getElementById('modalThumbnails');
+            thumbContainer.innerHTML = item.styles.map((imgUrl, idx) => `
+                <button onclick="document.getElementById('modalMainImg').src='${imgUrl}'" class="w-20 h-20 flex-shrink-0 rounded-lg overflow-hidden border-2 border-luxury-800 hover:border-luxury-accent">
+                    <img src="${imgUrl}" alt="Thumbnail ${idx}" class="w-full h-full object-cover">
+                </button>
+            `).join('');
+
+            const featureContainer = document.getElementById('modalFeatures');
+            featureContainer.innerHTML = item.features.map(f => `<li>${f}</li>`).join('');
+
+            document.getElementById('modalWhatsAppBtn').onclick = () => openWhatsApp(`Design Inquiry: ${item.title}`);
+
+            document.getElementById('designModal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            document.getElementById('designModal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Form Redirect
+        function handleInquiryRedirect(event) {
+            event.preventDefault();
+            const name = document.getElementById('inquiryName').value;
+            const phone = document.getElementById('inquiryPhone').value;
+            const design = document.getElementById('inquiryDesign').value;
+            const message = document.getElementById('inquiryMessage').value;
+
+            const fullText = `Hi MAISON VÈNE! My name is ${name} (${phone}). Fitting Inquiry for "${design}". Details: ${message}`;
+            window.open(`https://wa.me/15550000000?text=${encodeURIComponent(fullText)}`, '_blank');
+        }
+
+        // Navigation Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        mobileMenuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+        document.querySelectorAll('.mobile-link').forEach(l => l.addEventListener('click', () => mobileMenu.classList.add('hidden')));
+    </script>
 </body>
 </html>
