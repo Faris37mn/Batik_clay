@@ -82,7 +82,7 @@
 
             <!-- Desktop Nav -->
             <nav class="hidden lg:flex items-center gap-8 text-xs tracking-[0.2em] uppercase font-medium text-luxury-100">
-                <a href="#gallery" class="hover:text-luxury-accent transition-colors py-1">Design Portfolio</a>
+                <a href="#gallery" class="hover:text-luxury-accent transition-colors py-1">Fabrics & Products</a>
                 <a href="#instagram" class="hover:text-luxury-accent transition-colors py-1">IG Lookbook</a>
                 <a href="#story" class="hover:text-luxury-accent transition-colors py-1">Atelier Story</a>
                 <a href="#contact" class="hover:text-luxury-accent transition-colors py-1">Book Consultation</a>
@@ -117,7 +117,7 @@
         <!-- Mobile Drawer -->
         <div id="mobileMenu" class="hidden lg:hidden bg-luxury-900 border-t border-luxury-800 px-6 py-6 transition-all text-luxury-50">
             <div class="flex flex-col gap-4 text-xs tracking-widest uppercase font-medium">
-                <a href="#gallery" class="mobile-link hover:text-luxury-accent transition-colors py-1">Design Portfolio</a>
+                <a href="#gallery" class="mobile-link hover:text-luxury-accent transition-colors py-1">Fabrics & Products</a>
                 <a href="#instagram" class="mobile-link hover:text-luxury-accent transition-colors py-1">IG Lookbook</a>
                 <a href="#story" class="mobile-link hover:text-luxury-accent transition-colors py-1">Atelier Story</a>
                 <a href="#contact" class="mobile-link hover:text-luxury-accent transition-colors py-1">Book Consultation</a>
@@ -144,12 +144,12 @@
                 Handcrafted Batik Clay Perak Signature Series.
             </h1>
             <p class="text-luxury-900/80 text-sm sm:text-base md:text-lg max-w-2xl mb-10 font-medium leading-relaxed">
-                Where natural clay artistry meets refined modern design. Discover our handcrafted batik apparel and exclusive textiles. Browse our multi-angle design showcase below, or reach out to our team via WhatsApp for bespoke orders and color customizations.
+                Where natural clay artistry meets refined modern design. Discover our 4 signature fabric types and tailored apparel lines. Browse our sample collections below, or reach out to our atelier via WhatsApp.
             </p>
 
             <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
                 <a href="#gallery" class="bg-luxury-900 text-luxury-50 hover:bg-luxury-800 font-semibold text-xs tracking-widest uppercase px-8 py-4 rounded transition-all text-center shadow-lg">
-                    Explore Designs
+                    Explore Fabrics & Attire
                 </a>
                 <button onclick="openWhatsApp('Bespoke Custom Fitting')" class="bg-luxury-50/90 border-2 border-luxury-800 text-luxury-900 hover:bg-luxury-800 hover:text-white font-semibold text-xs tracking-widest uppercase px-8 py-4 rounded transition-all text-center flex items-center justify-center gap-2 shadow-sm">
                     <i class="fa-brands fa-whatsapp text-base"></i> Inquire Sizing via WhatsApp
@@ -161,18 +161,19 @@
     <!-- Interactive Multi-Style Design Portfolio Showcase -->
     <section id="gallery" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
         <div class="text-center mb-12">
-            <span class="text-luxury-accent text-xs tracking-widest uppercase block mb-2 font-bold">Interactive Portfolio</span>
-            <h2 class="font-serif text-3xl sm:text-5xl text-luxury-900 font-bold mb-4">Signature Designs & Styles</h2>
+            <span class="text-luxury-accent text-xs tracking-widest uppercase block mb-2 font-bold">Artisan Catalog</span>
+            <h2 class="font-serif text-3xl sm:text-5xl text-luxury-900 font-bold mb-4">Fabric Collections & Tailored Products</h2>
             <p class="text-luxury-900/70 text-xs sm:text-sm max-w-xl mx-auto font-medium">
-                Click any design card to view multiple style angles, color options, and detailed fabric close-ups.
+                Filter by unstitched fabric types or tailored readymade products. Click any item to view all sample designs and colorways.
             </p>
             
             <!-- Category Filters -->
             <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-4 mt-8" id="galleryFilter">
-                <button onclick="filterGallery('all')" class="filter-btn active bg-luxury-900 text-white border border-luxury-900 text-xs uppercase tracking-widest px-5 py-2 rounded-full font-semibold transition-all">All Collections</button>
-                <button onclick="filterGallery('batik')" class="filter-btn text-luxury-900 border border-luxury-200 hover:border-luxury-accent text-xs uppercase tracking-widest px-5 py-2 rounded-full font-semibold transition-all">Batik Clay Series</button>
-                <button onclick="filterGallery('kain')" class="filter-btn text-luxury-900 border border-luxury-200 hover:border-luxury-accent text-xs uppercase tracking-widest px-5 py-2 rounded-full font-semibold transition-all">Kain Pasang</button>
-                <button onclick="filterGallery('modern')" class="filter-btn text-luxury-900 border border-luxury-200 hover:border-luxury-accent text-xs uppercase tracking-widest px-5 py-2 rounded-full font-semibold transition-all">Modern Attire</button>
+                <button onclick="filterGallery('all')" class="filter-btn active bg-luxury-900 text-white border border-luxury-900 text-xs uppercase tracking-widest px-5 py-2 rounded-full font-semibold transition-all">All Items</button>
+                <button onclick="filterGallery('fabrics')" class="filter-btn text-luxury-900 border border-luxury-200 hover:border-luxury-accent text-xs uppercase tracking-widest px-5 py-2 rounded-full font-semibold transition-all">Fabrics (4 Types)</button>
+                <button onclick="filterGallery('kemeja-panjang')" class="filter-btn text-luxury-900 border border-luxury-200 hover:border-luxury-accent text-xs uppercase tracking-widest px-5 py-2 rounded-full font-semibold transition-all">Kemeja Lengan Panjang</button>
+                <button onclick="filterGallery('kemeja-pendek')" class="filter-btn text-luxury-900 border border-luxury-200 hover:border-luxury-accent text-xs uppercase tracking-widest px-5 py-2 rounded-full font-semibold transition-all">Kemeja Lengan Pendek</button>
+                <button onclick="filterGallery('kurung-kedah')" class="filter-btn text-luxury-900 border border-luxury-200 hover:border-luxury-accent text-xs uppercase tracking-widest px-5 py-2 rounded-full font-semibold transition-all">Kurung Kedah Tops</button>
             </div>
         </div>
 
@@ -217,15 +218,15 @@
                 </div>
 
                 <!-- IG Item 2 -->
-                <div class="relative group aspect-square rounded-xl overflow-hidden bg-luxury-200 cursor-pointer shadow-sm" onclick="openWhatsApp('Instagram Lookbook Post: Modern Kurung Batik')">
+                <div class="relative group aspect-square rounded-xl overflow-hidden bg-luxury-200 cursor-pointer shadow-sm" onclick="openWhatsApp('Instagram Lookbook Post: Modern Kurung Kedah')">
                     <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=80" alt="IG Look 2" class="w-full h-full object-cover img-zoom">
                     <div class="absolute inset-0 bg-luxury-900/85 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-between p-6 text-white">
                         <div class="flex justify-between items-center text-luxury-accent text-sm">
                             <i class="fa-brands fa-instagram text-xl"></i>
-                            <span class="text-[10px] tracking-widest uppercase font-semibold">Bespoke Fitting</span>
+                            <span class="text-[10px] tracking-widest uppercase font-semibold">Kurung Kedah Top</span>
                         </div>
                         <div>
-                            <p class="text-xs text-luxury-100 line-clamp-2 mb-3">Modern Kurung tailored with exclusive Batik Clay Perak textile.</p>
+                            <p class="text-xs text-luxury-100 line-clamp-2 mb-3">Traditional Kurung Kedah top tailored with exclusive Batik Clay Perak fabric.</p>
                             <span class="inline-flex items-center gap-2 text-[10px] uppercase tracking-widest text-emerald-400 font-semibold">
                                 <i class="fa-brands fa-whatsapp text-sm"></i> Inquire Post
                             </span>
@@ -234,15 +235,15 @@
                 </div>
 
                 <!-- IG Item 3 -->
-                <div class="relative group aspect-square rounded-xl overflow-hidden bg-luxury-200 cursor-pointer shadow-sm" onclick="openWhatsApp('Instagram Lookbook Post: Kain Pasang Selection')">
+                <div class="relative group aspect-square rounded-xl overflow-hidden bg-luxury-200 cursor-pointer shadow-sm" onclick="openWhatsApp('Instagram Lookbook Post: Kemeja Lengan Panjang')">
                     <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=800&q=80" alt="IG Look 3" class="w-full h-full object-cover img-zoom">
                     <div class="absolute inset-0 bg-luxury-900/85 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-between p-6 text-white">
                         <div class="flex justify-between items-center text-luxury-accent text-sm">
                             <i class="fa-brands fa-instagram text-xl"></i>
-                            <span class="text-[10px] tracking-widest uppercase font-semibold">Kain Pasang</span>
+                            <span class="text-[10px] tracking-widest uppercase font-semibold">Men's Kemeja</span>
                         </div>
                         <div>
-                            <p class="text-xs text-luxury-100 line-clamp-2 mb-3">New arrivals of unstitched 4-meter clay-resist batik lengths.</p>
+                            <p class="text-xs text-luxury-100 line-clamp-2 mb-3">Men's Kemeja Lengan Panjang tailored in Cotton Lawn Batik Clay.</p>
                             <span class="inline-flex items-center gap-2 text-[10px] uppercase tracking-widest text-emerald-400 font-semibold">
                                 <i class="fa-brands fa-whatsapp text-sm"></i> Inquire Post
                             </span>
@@ -295,7 +296,7 @@
                             Schedule Your Private Consultation
                         </h2>
                         <p class="text-luxury-900/70 text-sm sm:text-base mb-8 leading-relaxed font-medium">
-                            Fill out your preferred batik design, kain pasang length, or custom requirements below. Your inputs will be formatted and redirected directly to our WhatsApp consultation line.
+                            Fill out your preferred fabric type, tailoring size, or custom requirements below. Your inputs will be formatted and redirected directly to our WhatsApp consultation line.
                         </p>
                     </div>
 
@@ -314,8 +315,8 @@
                                 <i class="fa-solid fa-scissors text-lg"></i>
                             </div>
                             <div>
-                                <h4 class="text-sm font-bold text-luxury-900">Bespoke Tailoring & Kain Pasang</h4>
-                                <p class="text-xs text-luxury-900/70">Order unstitched lengths or request custom tailored outfits</p>
+                                <h4 class="text-sm font-bold text-luxury-900">Bespoke Tailoring & Fabric Orders</h4>
+                                <p class="text-xs text-luxury-900/70">Order unstitched fabric lengths or request ready-to-wear pieces</p>
                             </div>
                         </div>
                     </div>
@@ -341,18 +342,21 @@
                     </div>
 
                     <div>
-                        <label class="block text-xs uppercase tracking-widest text-luxury-900 font-bold mb-1">Design / Series Reference</label>
+                        <label class="block text-xs uppercase tracking-widest text-luxury-900 font-bold mb-1">Select Fabric or Product Line</label>
                         <select id="inquiryDesign" class="w-full bg-white border border-luxury-200 rounded p-3 text-sm text-luxury-900 focus:outline-none focus:border-luxury-accent transition-colors">
-                            <option value="Perak Clay-Resist Silk Kain Pasang">Perak Clay-Resist Silk Kain Pasang</option>
-                            <option value="Bespoke Modern Batik Kurung">Bespoke Modern Batik Kurung</option>
-                            <option value="Men's Handcrafted Batik Kemeja">Men's Handcrafted Batik Kemeja</option>
-                            <option value="Custom Colorway Order">Custom Colorway Order / Special Request</option>
+                            <option value="Jacquard Silk Fabric (4 Samples)">Jacquard Silk Fabric</option>
+                            <option value="Cotton Lawn Fabric (4 Samples)">Cotton Lawn Fabric</option>
+                            <option value="Viscose Crepe Fabric (4 Samples)">Viscose Crepe Fabric</option>
+                            <option value="Pure Chiffon Fabric (4 Samples)">Pure Chiffon Fabric</option>
+                            <option value="Kemeja Lengan Panjang Series">Kemeja Lengan Panjang</option>
+                            <option value="Kemeja Lengan Pendek Series">Kemeja Lengan Pendek</option>
+                            <option value="Kurung Kedah Tops Series">Kurung Kedah Tops</option>
                         </select>
                     </div>
 
                     <div>
                         <label class="block text-xs uppercase tracking-widest text-luxury-900 font-bold mb-1">Customization / Measurement Notes</label>
-                        <textarea id="inquiryMessage" rows="3" placeholder="Tell us your preferred color tone, kain pasang quantity, or custom fitting notes..." class="w-full bg-white border border-luxury-200 rounded p-3 text-sm text-luxury-900 focus:outline-none focus:border-luxury-accent transition-colors"></textarea>
+                        <textarea id="inquiryMessage" rows="3" placeholder="Specify your preferred sample design, color choice, or sizing notes..." class="w-full bg-white border border-luxury-200 rounded p-3 text-sm text-luxury-900 focus:outline-none focus:border-luxury-accent transition-colors"></textarea>
                     </div>
 
                     <button type="submit" class="w-full bg-luxury-900 text-luxury-50 font-semibold text-xs tracking-widest uppercase py-4 rounded hover:bg-luxury-800 transition-colors flex items-center justify-center gap-2 shadow-md">
@@ -386,7 +390,7 @@
             <div>
                 <h4 class="text-white font-semibold uppercase tracking-widest text-xs mb-4">Navigation</h4>
                 <ul class="space-y-2 text-xs text-luxury-100/80">
-                    <li><a href="#gallery" class="hover:text-luxury-accent transition-colors">Design Portfolio</a></li>
+                    <li><a href="#gallery" class="hover:text-luxury-accent transition-colors">Fabrics & Products</a></li>
                     <li><a href="#instagram" class="hover:text-luxury-accent transition-colors">IG Lookbook</a></li>
                     <li><a href="#story" class="hover:text-luxury-accent transition-colors">Atelier Story</a></li>
                 </ul>
@@ -395,8 +399,8 @@
             <div>
                 <h4 class="text-white font-semibold uppercase tracking-widest text-xs mb-4">WhatsApp Inquiries</h4>
                 <ul class="space-y-2 text-xs text-luxury-100/80">
-                    <li><a href="javascript:void(0)" onclick="openWhatsApp('Kain Pasang Availability')" class="hover:text-luxury-accent transition-colors">Kain Pasang Stock</a></li>
-                    <li><a href="javascript:void(0)" onclick="openWhatsApp('Custom Tailoring Booking')" class="hover:text-luxury-accent transition-colors">Custom Tailoring</a></li>
+                    <li><a href="javascript:void(0)" onclick="openWhatsApp('Fabric Stock Availability')" class="hover:text-luxury-accent transition-colors">Fabric Stock</a></li>
+                    <li><a href="javascript:void(0)" onclick="openWhatsApp('Kemeja / Kurung Sizing')" class="hover:text-luxury-accent transition-colors">Sizing & Fittings</a></li>
                     <li><a href="javascript:void(0)" onclick="openWhatsApp('Color Swatch Inquiry')" class="hover:text-luxury-accent transition-colors">Color Swatches</a></li>
                 </ul>
             </div>
@@ -446,7 +450,7 @@
                         <p id="modalDescription" class="text-luxury-900/80 text-sm leading-relaxed mb-6 font-medium"></p>
 
                         <div class="border-t border-luxury-200 pt-4 space-y-3">
-                            <h4 class="text-xs uppercase tracking-widest text-luxury-900 font-bold">Multiple Styles & Specifications:</h4>
+                            <h4 class="text-xs uppercase tracking-widest text-luxury-900 font-bold">Designs & Specifications:</h4>
                             <ul id="modalFeatures" class="text-xs text-luxury-900/80 space-y-1.5 list-disc pl-4 font-medium">
                                 <!-- Feature items -->
                             </ul>
@@ -466,58 +470,151 @@
 
     <!-- JavaScript Data & Operations -->
     <script>
-        // Multi-Style Design Data Portfolio for Wallago Collection
+        // Catalog Data matching your exact counts (4 Fabric types + 3 Product Lines)
         const designData = [
+            // --- FABRIC TYPE 1 ---
             {
-                id: 'batik-silk-pasang',
-                category: 'kain',
-                categoryLabel: 'Kain Pasang',
-                title: 'Perak Clay-Resist Silk Kain Pasang',
-                desc: 'Unstitched 4-meter pure silk fabric featuring authentic Perak clay-resist motifs, rich earthy color gradients, and luxurious drape.',
-                mainImg: 'https://images.unsplash.com/photo-1566174053879-31528523f8ae?auto=format&fit=crop&w=1000&q=80',
+                id: 'fabric-jacquard-silk',
+                category: 'fabrics',
+                categoryLabel: 'Fabric Collection',
+                title: 'Cotton Poplin (4 Sample Designs)',
+                desc: 'Smooth, crisp, and effortlessly versatile, our Cotton Poplin is a wardrobe staple. Featuring a tightly woven plain weave with a subtle, silky sheen, this lightweight fabric holds its shape beautifully while remaining breathable and soft against the skin. Perfect for crafting tailored button-down shirts, chic summer dresses, lightweight skirts, and everyday blouses.',
+                mainImg: 'images/cotton-poplin/cotton-poplin-2.jpeg',
                 styles: [
                     'https://images.unsplash.com/photo-1566174053879-31528523f8ae?auto=format&fit=crop&w=1000&q=80',
                     'https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?auto=format&fit=crop&w=1000&q=80',
-                    'https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=1000&q=80'
+                    'https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=1000&q=80',
+                    'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1000&q=80'
                 ],
                 features: [
-                    'Standard 4-meter unstitched length for custom tailoring',
-                    'Natural riverbed clay-resist dyeing process from Perak',
-                    'Available in multiple earth-tone colorways upon request'
+                    'Sample Design #1: Classic Earthy Floral',
+                    'Sample Design #2: Organic Clay Wave',
+                    'Sample Design #3: Royal Gold Accent Motif',
+                    'Sample Design #4: Soft Sand Abstract',
+                    'Sold unstitched by yard/meter or for custom tailoring'
                 ]
             },
+            // --- FABRIC TYPE 2 ---
             {
-                id: 'modern-kurung',
-                category: 'batik',
-                categoryLabel: 'Bespoke Series',
-                title: 'Bespoke Modern Batik Kurung',
-                desc: 'Elegant modern kurung tailored with signature Batik Clay Perak fabric, featuring subtle gold thread accents and structured silhouette.',
+                id: 'fabric-cotton-lawn',
+                category: 'fabrics',
+                categoryLabel: 'Fabric Collection',
+                title: 'Cotton Lawn (4 Sample Designs)',
+                desc: '100% fine Cotton Lawn fabric. Extremely breathable, soft to touch, and printed with natural clay pigments for everyday luxury.',
+                mainImg: 'https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=1000&q=80',
+                styles: [
+                    'https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=1000&q=80',
+                    'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1000&q=80',
+                    'https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1000&q=80',
+                    'https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?auto=format&fit=crop&w=1000&q=80'
+                ],
+                features: [
+                    'Sample Design #1: Natural Earth Stripe',
+                    'Sample Design #2: Perak River Clay Geometric',
+                    'Sample Design #3: Heritage Floral Vine',
+                    'Sample Design #4: Modern Minimalist Clay Spot',
+                    'Lightweight & comfortable for daily wear'
+                ]
+            },
+            // --- FABRIC TYPE 3 ---
+            {
+                id: 'fabric-viscose-crepe',
+                category: 'fabrics',
+                categoryLabel: 'Fabric Collection',
+                title: 'Viscose Crepe (4 Sample Designs)',
+                desc: 'Supple Viscose Crepe fabric with elegant drape and rich clay color saturation. Perfect for modern Kurung and drapes.',
+                mainImg: 'https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?auto=format&fit=crop&w=1000&q=80',
+                styles: [
+                    'https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?auto=format&fit=crop&w=1000&q=80',
+                    'https://images.unsplash.com/photo-1566174053879-31528523f8ae?auto=format&fit=crop&w=1000&q=80',
+                    'https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=1000&q=80',
+                    'https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=1000&q=80'
+                ],
+                features: [
+                    'Sample Design #1: Fluid Clay Waterfalls',
+                    'Sample Design #2: Deep Burgundy Botanical',
+                    'Sample Design #3: Ochre Sand Ombre',
+                    'Sample Design #4: Terracotta Texture',
+                    'Fluid motion with crease-resistant quality'
+                ]
+            },
+            // --- FABRIC TYPE 4 ---
+            {
+                id: 'fabric-pure-chiffon',
+                category: 'fabrics',
+                categoryLabel: 'Fabric Collection',
+                title: 'Pure Chiffon (4 Sample Designs)',
+                desc: 'Ethereal Pure Chiffon fabric with delicate clay batik motifs. Sheer, romantic, and lightweight for layered ensembles.',
+                mainImg: 'https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=1000&q=80',
+                styles: [
+                    'https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=1000&q=80',
+                    'https://images.unsplash.com/photo-1566174053879-31528523f8ae?auto=format&fit=crop&w=1000&q=80',
+                    'https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?auto=format&fit=crop&w=1000&q=80',
+                    'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1000&q=80'
+                ],
+                features: [
+                    'Sample Design #1: Sheer Sand Blossom',
+                    'Sample Design #2: Delicate Clay Border',
+                    'Sample Design #3: Floating Golden Leaves',
+                    'Sample Design #4: Soft Clay Cloud',
+                    'Ideal for shawls, overlays, and flowing dresses'
+                ]
+            },
+            // --- PRODUCT LINE 1 ---
+            {
+                id: 'product-kemeja-panjang',
+                category: 'kemeja-panjang',
+                categoryLabel: 'Ready-To-Wear',
+                title: 'Kemeja Lengan Panjang (2 Sample Designs)',
+                desc: 'Tailored men\'s long-sleeve batik shirts crafted from premium Cotton Lawn and Jacquard Silk with matched pattern plackets.',
                 mainImg: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1000&q=80',
                 styles: [
                     'https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1000&q=80',
                     'https://images.unsplash.com/photo-1617137984095-74e4e5e3613f?auto=format&fit=crop&w=1000&q=80'
                 ],
                 features: [
-                    'Custom tailored measurements provided via WhatsApp consultation',
-                    'Hand-finished hem and concealed back zip',
-                    'Exclusive clay-resist pattern placement'
+                    'Sample Design #1: Classic Earthy Maroon Long-Sleeve',
+                    'Sample Design #2: Royal Clay Gold Long-Sleeve',
+                    'Structured collar & button cuffs',
+                    'Available in sizes S to XXL & custom sizing'
                 ]
             },
+            // --- PRODUCT LINE 2 ---
             {
-                id: 'mens-kemeja',
-                category: 'modern',
-                categoryLabel: 'Men\'s Attire',
-                title: 'Handcrafted Batik Kemeja',
-                desc: 'Sophisticated men\'s long-sleeve batik shirt crafted from breathable cotton silk featuring traditional Perak earth motifs.',
+                id: 'product-kemeja-pendek',
+                category: 'kemeja-pendek',
+                categoryLabel: 'Ready-To-Wear',
+                title: 'Kemeja Lengan Pendek (2 Sample Designs)',
+                desc: 'Smart-casual men\'s short-sleeve batik shirts designed for comfort and modern summer style using breathable Cotton Lawn.',
                 mainImg: 'https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=1000&q=80',
                 styles: [
                     'https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=1000&q=80',
                     'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1000&q=80'
                 ],
                 features: [
-                    'Relaxed yet tailored fit for formal or casual wear',
-                    'Matched pattern pocket and button placket',
-                    'Available in sizes S to XXL with custom sizing options'
+                    'Sample Design #1: Casual Sand Short-Sleeve',
+                    'Sample Design #2: Terracotta Geometric Short-Sleeve',
+                    'Breathable relaxed fit for everyday wear',
+                    'Matched pocket detailing'
+                ]
+            },
+            // --- PRODUCT LINE 3 ---
+            {
+                id: 'product-kurung-kedah',
+                category: 'kurung-kedah',
+                categoryLabel: 'Ready-To-Wear',
+                title: 'Kurung Kedah Tops (2 Sample Designs)',
+                desc: 'Traditional loose-cut Kurung Kedah tops given a modern update with exclusive Batik Clay Perak motifs and soft linings.',
+                mainImg: 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1000&q=80',
+                styles: [
+                    'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1000&q=80',
+                    'https://images.unsplash.com/photo-1566174053879-31528523f8ae?auto=format&fit=crop&w=1000&q=80'
+                ],
+                features: [
+                    'Sample Design #1: Heritage Maroon Kurung Kedah Top',
+                    'Sample Design #2: Sand Gold Floral Kurung Kedah Top',
+                    'Classic 3/4 sleeve length & comfortable relaxed collar',
+                    'Comes unstitched or tailored with matching skirt options'
                 ]
             }
         ];
@@ -542,7 +639,7 @@
                         </span>
                         <div class="absolute inset-0 bg-luxury-900/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                             <span class="bg-luxury-900 text-white text-xs uppercase tracking-widest font-bold px-5 py-2.5 rounded-full shadow-lg border border-luxury-accent">
-                                View Styles & Inquire
+                                View Designs & Samples
                             </span>
                         </div>
                     </div>
@@ -552,9 +649,9 @@
                             <p class="text-luxury-900/70 text-xs line-clamp-2 leading-relaxed mb-4 font-medium">${item.desc}</p>
                         </div>
                         <div class="pt-4 border-t border-luxury-200 flex items-center justify-between text-xs">
-                            <span class="text-luxury-800 uppercase tracking-widest font-bold">Multi-Style Gallery</span>
+                            <span class="text-luxury-800 uppercase tracking-widest font-bold">${item.styles.length} Sample Designs</span>
                             <span class="text-emerald-700 font-bold flex items-center gap-1.5 uppercase tracking-wider">
-                                <i class="fa-brands fa-whatsapp text-sm text-emerald-600"></i> WhatsApp Inquire
+                                <i class="fa-brands fa-whatsapp text-sm text-emerald-600"></i> Inquire WhatsApp
                             </span>
                         </div>
                     </div>
@@ -610,7 +707,7 @@
 
             // WhatsApp Modal Button
             document.getElementById('modalWhatsAppBtn').onclick = () => {
-                openWhatsApp(`Inquiry regarding design: ${item.title}`);
+                openWhatsApp(`Inquiry regarding: ${item.title}`);
             };
 
             document.getElementById('designModal').classList.remove('hidden');
@@ -637,7 +734,7 @@
             const message = document.getElementById('inquiryMessage').value;
 
             const phoneNumber = "60123456789";
-            const text = encodeURIComponent(`Bespoke Inquiry - Wallago Collection:\n\nName: ${name}\nContact: ${phone}\nDesign Choice: ${design}\nNotes: ${message}`);
+            const text = encodeURIComponent(`Bespoke Inquiry - Wallago Collection:\n\nName: ${name}\nContact: ${phone}\nSelection: ${design}\nNotes: ${message}`);
             window.open(`https://wa.me/${phoneNumber}?text=${text}`, '_blank');
         }
 
