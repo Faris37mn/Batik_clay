@@ -130,8 +130,19 @@
 
     <!-- Hero Section -->
     <section class="relative min-h-[80vh] flex items-center justify-center overflow-hidden border-b border-luxury-200">
-        <div class="absolute inset-0 bg-cover bg-center filter brightness-75 scale-105 transition-transform duration-1000" 
-             style="background-image: url('images/IG/IG1.jpg');">
+        <div class="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
+            <!-- Background Image -->
+            <div class="absolute inset-0 bg-cover bg-top filter brightness-85 scale-105" 
+                 style="background-image: url('images/IG/IG1.jpg');">
+            </div>
+        
+            <!-- Gradient Overlay to smooth out top & bottom -->
+            <div class="absolute inset-0 bg-gradient-to-b from-luxury-900/70 via-luxury-900/40 to-luxury-50"></div>
+        
+            <!-- Hero Content -->
+            <div class="relative z-10 max-w-4xl mx-auto text-center px-4 py-20">
+                ...
+            </div>
         </div>
         <div class="absolute inset-0 bg-gradient-to-t from-luxury-50 via-luxury-50/70 to-luxury-900/40"></div>
 
