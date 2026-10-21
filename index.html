@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MAISON VÈNE | Haute Couture & Bespoke Portfolio</title>
+    <title>Wallago Collection | Batik Clay Perak</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Font Awesome Icons -->
@@ -61,9 +61,9 @@
 
     <!-- Top Announcement Bar -->
     <div class="bg-luxury-accent text-luxury-900 text-xs tracking-widest font-semibold py-2.5 px-4 text-center uppercase flex items-center justify-center gap-2">
-        <span>Bespoke Atelier & Portfolio Showcase</span>
+        <span>Handcrafted Clay-Resist Batik Perak</span>
         <span>&bull;</span>
-        <span>Custom Inquiries & Fittings via WhatsApp</span>
+        <span>Custom Colors & Kain Pasang via WhatsApp</span>
     </div>
 
     <!-- Navigation Header -->
@@ -83,9 +83,18 @@
                 <a href="#contact" class="hover:text-luxury-accent transition-colors py-1">Book Consultation</a>
             </nav>
 
-            <!-- Brand Logo -->
-            <a href="#" class="text-2xl sm:text-3xl font-serif tracking-widest font-bold text-center text-luxury-100 uppercase">
-                MAISON <span class="text-luxury-accent font-normal italic">VÈNE</span>
+            <!-- Brand Logo (Recreated from Business Card) -->
+            <a href="#" class="flex items-center gap-3">
+                <svg class="w-10 h-10 rounded-full border border-luxury-accent/40 p-0.5 bg-luxury-800 shrink-0" viewBox="0 0 200 200">
+                    <circle cx="100" cy="100" r="95" fill="#FAF8F5" stroke="#D4AF37" stroke-width="4"/>
+                    <text x="100" y="85" font-family="Cormorant Garamond, serif" font-size="28" font-weight="bold" fill="#2C2728" text-anchor="middle" font-style="italic">Wallago</text>
+                    <text x="100" y="115" font-family="Plus Jakarta Sans, sans-serif" font-size="14" font-weight="bold" fill="#2C2728" text-anchor="middle" letter-spacing="3">COLLECTION</text>
+                    <text x="100" y="140" font-family="Plus Jakarta Sans, sans-serif" font-size="9" fill="#888" text-anchor="middle" letter-spacing="2">SINCE 2023</text>
+                </svg>
+                <div class="text-left hidden sm:block">
+                    <span class="text-sm font-serif tracking-widest font-bold text-white block uppercase">Wallago Collection</span>
+                    <span class="text-[10px] tracking-[0.25em] text-luxury-accent uppercase block">Batik Clay Perak</span>
+                </div>
             </a>
 
             <!-- Social & WhatsApp Quick Action -->
@@ -122,12 +131,15 @@
         <div class="absolute inset-0 bg-gradient-to-t from-luxury-900 via-luxury-900/60 to-transparent"></div>
 
         <div class="relative z-10 max-w-4xl mx-auto text-center px-4 py-20 flex flex-col items-center">
-            <span class="text-luxury-accent text-xs sm:text-sm tracking-[0.35em] font-medium uppercase mb-4 block">Bespoke Couture & Tailoring</span>
+            <div class="inline-flex items-center gap-2 bg-luxury-900/80 border border-luxury-accent/50 px-4 py-1.5 rounded-full mb-6">
+                <span class="w-2 h-2 rounded-full bg-luxury-accent animate-pulse"></span>
+                <span class="text-luxury-accent text-xs tracking-[0.25em] uppercase font-medium">Wallago Collection | Est. 2023</span>
+            </div>
             <h1 class="font-serif text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight text-white mb-6 leading-tight">
-                Crafted to Inspire. Tailored to Order.
+                Handcrafted Batik Clay Perak Signature Series.
             </h1>
             <p class="text-luxury-200 text-sm sm:text-base md:text-lg max-w-2xl mb-10 font-light leading-relaxed">
-                Explore our signature design series featuring multi-angle views and styled variations. For custom sizing, color availability, or private fittings, connect directly with our atelier via WhatsApp.
+                Where natural clay artistry meets refined modern design. Discover our handcrafted batik apparel and exclusive textiles. Browse our multi-angle design showcase below, or reach out to our team via WhatsApp for bespoke orders and color customizations.
             </p>
 
             <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
@@ -153,9 +165,9 @@
             <!-- Category Filters -->
             <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-4 mt-8" id="galleryFilter">
                 <button onclick="filterGallery('all')" class="filter-btn active bg-luxury-accent text-luxury-900 border border-luxury-accent text-xs uppercase tracking-widest px-5 py-2 rounded-full font-semibold transition-all">All Collections</button>
-                <button onclick="filterGallery('evening')" class="filter-btn text-luxury-200 border border-luxury-800 hover:border-luxury-accent text-xs uppercase tracking-widest px-5 py-2 rounded-full font-medium transition-all">Evening Gowns</button>
-                <button onclick="filterGallery('bespoke')" class="filter-btn text-luxury-200 border border-luxury-800 hover:border-luxury-accent text-xs uppercase tracking-widest px-5 py-2 rounded-full font-medium transition-all">Bespoke Tailoring</button>
-                <button onclick="filterGallery('casual')" class="filter-btn text-luxury-200 border border-luxury-800 hover:border-luxury-accent text-xs uppercase tracking-widest px-5 py-2 rounded-full font-medium transition-all">Resort & Outerwear</button>
+                <button onclick="filterGallery('batik')" class="filter-btn text-luxury-200 border border-luxury-800 hover:border-luxury-accent text-xs uppercase tracking-widest px-5 py-2 rounded-full font-medium transition-all">Batik Clay Series</button>
+                <button onclick="filterGallery('kain')" class="filter-btn text-luxury-200 border border-luxury-800 hover:border-luxury-accent text-xs uppercase tracking-widest px-5 py-2 rounded-full font-medium transition-all">Kain Pasang</button>
+                <button onclick="filterGallery('modern')" class="filter-btn text-luxury-200 border border-luxury-800 hover:border-luxury-accent text-xs uppercase tracking-widest px-5 py-2 rounded-full font-medium transition-all">Modern Attire</button>
             </div>
         </div>
 
@@ -174,7 +186,7 @@
                     <h2 class="font-serif text-3xl sm:text-5xl text-white font-semibold">Instagram Lookbook</h2>
                 </div>
                 <a href="https://instagram.com" target="_blank" class="mt-4 md:mt-0 text-xs uppercase tracking-widest text-luxury-accent hover:underline flex items-center gap-2">
-                    <span>Follow @maisonvene on Instagram</span>
+                    <span>Follow @wallagocollection on Instagram</span>
                     <i class="fa-solid fa-arrow-right"></i>
                 </a>
             </div>
@@ -183,15 +195,15 @@
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
                 
                 <!-- IG Item 1 -->
-                <div class="relative group aspect-square rounded-xl overflow-hidden bg-luxury-800 cursor-pointer" onclick="openWhatsApp('Instagram Lookbook Post: SS26 Silk Drape')">
+                <div class="relative group aspect-square rounded-xl overflow-hidden bg-luxury-800 cursor-pointer" onclick="openWhatsApp('Instagram Lookbook Post: Clay-Resist Batik Motif')">
                     <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=800&q=80" alt="IG Look 1" class="w-full h-full object-cover img-zoom">
                     <div class="absolute inset-0 bg-luxury-900/80 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-between p-6">
                         <div class="flex justify-between items-center text-luxury-accent text-sm">
                             <i class="fa-brands fa-instagram text-xl"></i>
-                            <span class="text-[10px] tracking-widest uppercase">SS26 Series</span>
+                            <span class="text-[10px] tracking-widest uppercase">Perak Heritage</span>
                         </div>
                         <div>
-                            <p class="text-xs text-luxury-100 line-clamp-2 mb-3">Hand-pleated champagne silk gown back detailing. Inquire for custom color options.</p>
+                            <p class="text-xs text-luxury-100 line-clamp-2 mb-3">Handcrafted clay-resist batik motif on natural silk. Inquire for custom color options.</p>
                             <span class="inline-flex items-center gap-2 text-[10px] uppercase tracking-widest text-emerald-400 font-semibold">
                                 <i class="fa-brands fa-whatsapp text-sm"></i> Inquire Post
                             </span>
@@ -200,15 +212,15 @@
                 </div>
 
                 <!-- IG Item 2 -->
-                <div class="relative group aspect-square rounded-xl overflow-hidden bg-luxury-800 cursor-pointer" onclick="openWhatsApp('Instagram Lookbook Post: Double-Breasted Tuxedo')">
+                <div class="relative group aspect-square rounded-xl overflow-hidden bg-luxury-800 cursor-pointer" onclick="openWhatsApp('Instagram Lookbook Post: Modern Kurung Batik')">
                     <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=80" alt="IG Look 2" class="w-full h-full object-cover img-zoom">
                     <div class="absolute inset-0 bg-luxury-900/80 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-between p-6">
                         <div class="flex justify-between items-center text-luxury-accent text-sm">
                             <i class="fa-brands fa-instagram text-xl"></i>
-                            <span class="text-[10px] tracking-widest uppercase">Bespoke Suite</span>
+                            <span class="text-[10px] tracking-widest uppercase">Bespoke Fitting</span>
                         </div>
                         <div>
-                            <p class="text-xs text-luxury-100 line-clamp-2 mb-3">Midnight blue velvet double-breasted tuxedo fitting session.</p>
+                            <p class="text-xs text-luxury-100 line-clamp-2 mb-3">Modern Kurung tailored with exclusive Batik Clay Perak textile.</p>
                             <span class="inline-flex items-center gap-2 text-[10px] uppercase tracking-widest text-emerald-400 font-semibold">
                                 <i class="fa-brands fa-whatsapp text-sm"></i> Inquire Post
                             </span>
@@ -217,15 +229,15 @@
                 </div>
 
                 <!-- IG Item 3 -->
-                <div class="relative group aspect-square rounded-xl overflow-hidden bg-luxury-800 cursor-pointer" onclick="openWhatsApp('Instagram Lookbook Post: Structured Trench Coat')">
+                <div class="relative group aspect-square rounded-xl overflow-hidden bg-luxury-800 cursor-pointer" onclick="openWhatsApp('Instagram Lookbook Post: Kain Pasang Selection')">
                     <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=800&q=80" alt="IG Look 3" class="w-full h-full object-cover img-zoom">
                     <div class="absolute inset-0 bg-luxury-900/80 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-between p-6">
                         <div class="flex justify-between items-center text-luxury-accent text-sm">
                             <i class="fa-brands fa-instagram text-xl"></i>
-                            <span class="text-[10px] tracking-widest uppercase">Outerwear</span>
+                            <span class="text-[10px] tracking-widest uppercase">Kain Pasang</span>
                         </div>
                         <div>
-                            <p class="text-xs text-luxury-100 line-clamp-2 mb-3">Minimalist oversized gabardine trench coat styled with wide trousers.</p>
+                            <p class="text-xs text-luxury-100 line-clamp-2 mb-3">New arrivals of unstitched 4-meter clay-resist batik lengths.</p>
                             <span class="inline-flex items-center gap-2 text-[10px] uppercase tracking-widest text-emerald-400 font-semibold">
                                 <i class="fa-brands fa-whatsapp text-sm"></i> Inquire Post
                             </span>
@@ -234,15 +246,15 @@
                 </div>
 
                 <!-- IG Item 4 -->
-                <div class="relative group aspect-square rounded-xl overflow-hidden bg-luxury-800 cursor-pointer" onclick="openWhatsApp('Instagram Lookbook Post: Atelier Runway Feature')">
+                <div class="relative group aspect-square rounded-xl overflow-hidden bg-luxury-800 cursor-pointer" onclick="openWhatsApp('Instagram Lookbook Post: Workshop Behind the Scenes')">
                     <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=800&q=80" alt="IG Look 4" class="w-full h-full object-cover img-zoom">
                     <div class="absolute inset-0 bg-luxury-900/80 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-between p-6">
                         <div class="flex justify-between items-center text-luxury-accent text-sm">
                             <i class="fa-brands fa-instagram text-xl"></i>
-                            <span class="text-[10px] tracking-widest uppercase">Editorial</span>
+                            <span class="text-[10px] tracking-widest uppercase">Atelier Life</span>
                         </div>
                         <div>
-                            <p class="text-xs text-luxury-100 line-clamp-2 mb-3">Behind the scenes at Milan Fashion Week backstage fittings.</p>
+                            <p class="text-xs text-luxury-100 line-clamp-2 mb-3">Behind the scenes applying natural clay-resist patterns in Perak.</p>
                             <span class="inline-flex items-center gap-2 text-[10px] uppercase tracking-widest text-emerald-400 font-semibold">
                                 <i class="fa-brands fa-whatsapp text-sm"></i> Inquire Post
                             </span>
@@ -257,10 +269,10 @@
     <!-- Brand Philosophy Brief -->
     <section id="story" class="py-20 bg-luxury-800/30 border-y border-luxury-800">
         <div class="max-w-5xl mx-auto px-4 text-center">
-            <span class="text-luxury-accent text-xs tracking-widest uppercase block mb-3">Atelier Standards</span>
-            <h2 class="font-serif text-3xl sm:text-5xl text-white font-medium mb-6">No Mass Production. Pure Craftsmanship.</h2>
+            <span class="text-luxury-accent text-xs tracking-widest uppercase block mb-3">Batik Clay Perak Heritage</span>
+            <h2 class="font-serif text-3xl sm:text-5xl text-white font-medium mb-6">Authentic Clay-Resist Artistry.</h2>
             <p class="text-luxury-200 text-sm sm:text-base leading-relaxed font-light max-w-3xl mx-auto">
-                MAISON VÈNE focuses exclusively on bespoke custom orders, individual client consultations, and tailored silhouettes. Each piece is constructed using sustainably sourced European fabrics and finished by hand. Connect directly with our lead tailor via WhatsApp to bring your vision to life.
+                Wallago Collection preserves the unique craft of Batik Tanah Liat (Clay-Resist Batik) originating from Perak. Using natural riverbed clay as a resist technique instead of traditional hot wax, each yard of fabric yields distinct organic textures, earthy tones, and one-of-a-kind wearable art. Connect with our atelier via WhatsApp for custom fabric lengths and personalized tailoring.
             </p>
         </div>
     </section>
@@ -278,7 +290,7 @@
                             Schedule Your Private Consultation
                         </h2>
                         <p class="text-luxury-300 text-sm sm:text-base mb-8 leading-relaxed font-light">
-                            Fill out your preferred fitting style or custom requirements below. Your inputs will be formatted and redirected directly to our WhatsApp consultation line.
+                            Fill out your preferred batik design, kain pasang length, or custom requirements below. Your inputs will be formatted and redirected directly to our WhatsApp consultation line.
                         </p>
                     </div>
 
@@ -289,7 +301,7 @@
                             </div>
                             <div>
                                 <h4 class="text-sm font-semibold text-white">Instant WhatsApp Consultation</h4>
-                                <p class="text-xs text-luxury-300">Fast response on fabric swatches, measurements, and delivery timelines</p>
+                                <p class="text-xs text-luxury-300">Fast response on fabric stock, color choices, and custom orders</p>
                             </div>
                         </div>
                         <div class="flex items-center gap-4">
@@ -297,8 +309,8 @@
                                 <i class="fa-solid fa-scissors text-lg"></i>
                             </div>
                             <div>
-                                <h4 class="text-sm font-semibold text-white">Custom Outfit Reproduction</h4>
-                                <p class="text-xs text-luxury-300">Share any photo or Instagram Reel link for a custom quote</p>
+                                <h4 class="text-sm font-semibold text-white">Bespoke Tailoring & Kain Pasang</h4>
+                                <p class="text-xs text-luxury-300">Order unstitched lengths or request custom tailored outfits</p>
                             </div>
                         </div>
                     </div>
@@ -310,32 +322,32 @@
 
                 <!-- Custom WhatsApp Pre-fill Form -->
                 <form onsubmit="handleInquiryRedirect(event)" class="bg-luxury-900 border border-luxury-800 p-6 sm:p-8 rounded-xl space-y-4">
-                    <h3 class="font-serif text-2xl text-white mb-2">Request Bespoke Fitting</h3>
+                    <h3 class="font-serif text-2xl text-white mb-2">Request Design Inquiry</h3>
                     <p class="text-xs text-luxury-300 mb-4">This form automatically creates a structured WhatsApp message.</p>
                     
                     <div>
                         <label class="block text-xs uppercase tracking-widest text-luxury-300 mb-1">Your Full Name *</label>
-                        <input type="text" id="inquiryName" required placeholder="e.g. Sophia Loren" class="w-full bg-luxury-800/50 border border-luxury-800 rounded p-3 text-sm text-white focus:outline-none focus:border-luxury-accent transition-colors">
+                        <input type="text" id="inquiryName" required placeholder="e.g. Aminah Rahman" class="w-full bg-luxury-800/50 border border-luxury-800 rounded p-3 text-sm text-white focus:outline-none focus:border-luxury-accent transition-colors">
                     </div>
 
                     <div>
                         <label class="block text-xs uppercase tracking-widest text-luxury-300 mb-1">WhatsApp / Contact Number *</label>
-                        <input type="tel" id="inquiryPhone" required placeholder="+1 (555) 000-0000" class="w-full bg-luxury-800/50 border border-luxury-800 rounded p-3 text-sm text-white focus:outline-none focus:border-luxury-accent transition-colors">
+                        <input type="tel" id="inquiryPhone" required placeholder="+60 12-345 6789" class="w-full bg-luxury-800/50 border border-luxury-800 rounded p-3 text-sm text-white focus:outline-none focus:border-luxury-accent transition-colors">
                     </div>
 
                     <div>
-                        <label class="block text-xs uppercase tracking-widest text-luxury-300 mb-1">Design / Style Reference</label>
+                        <label class="block text-xs uppercase tracking-widest text-luxury-300 mb-1">Design / Series Reference</label>
                         <select id="inquiryDesign" class="w-full bg-luxury-800/50 border border-luxury-800 rounded p-3 text-sm text-luxury-200 focus:outline-none focus:border-luxury-accent transition-colors">
-                            <option value="Aurelia Draped Silk Gown">Aurelia Draped Silk Gown</option>
-                            <option value="Midnight Velvet Double Blazer">Midnight Velvet Double Blazer</option>
-                            <option value="Pleated Oversized Trench Coat">Pleated Oversized Trench Coat</option>
-                            <option value="Custom Event Outfit">Custom Event Outfit / Special Fitting</option>
+                            <option value="Perak Clay-Resist Silk Kain Pasang">Perak Clay-Resist Silk Kain Pasang</option>
+                            <option value="Bespoke Modern Batik Kurung">Bespoke Modern Batik Kurung</option>
+                            <option value="Men's Handcrafted Batik Kemeja">Men's Handcrafted Batik Kemeja</option>
+                            <option value="Custom Colorway Order">Custom Colorway Order / Special Request</option>
                         </select>
                     </div>
 
                     <div>
                         <label class="block text-xs uppercase tracking-widest text-luxury-300 mb-1">Customization / Measurement Notes</label>
-                        <textarea id="inquiryMessage" rows="3" placeholder="Tell us your measurements, preferred fabric color, or event date..." class="w-full bg-luxury-800/50 border border-luxury-800 rounded p-3 text-sm text-white focus:outline-none focus:border-luxury-accent transition-colors"></textarea>
+                        <textarea id="inquiryMessage" rows="3" placeholder="Tell us your preferred color tone, kain pasang quantity, or custom fitting notes..." class="w-full bg-luxury-800/50 border border-luxury-800 rounded p-3 text-sm text-white focus:outline-none focus:border-luxury-accent transition-colors"></textarea>
                     </div>
 
                     <button type="submit" class="w-full bg-luxury-accent text-luxury-900 font-semibold text-xs tracking-widest uppercase py-4 rounded hover:bg-luxury-100 transition-colors flex items-center justify-center gap-2">
@@ -352,11 +364,17 @@
     <footer class="bg-luxury-900 border-t border-luxury-800 text-luxury-300 py-16 px-4 sm:px-6 lg:px-8 text-sm">
         <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
             <div>
-                <a href="#" class="text-2xl font-serif tracking-widest font-bold text-white uppercase block mb-4">
-                    MAISON <span class="text-luxury-accent font-normal italic">VÈNE</span>
-                </a>
+                <div class="flex items-center gap-3 mb-4">
+                    <svg class="w-8 h-8 rounded-full border border-luxury-accent/40 p-0.5 bg-luxury-800 shrink-0" viewBox="0 0 200 200">
+                        <circle cx="100" cy="100" r="95" fill="#FAF8F5" stroke="#D4AF37" stroke-width="4"/>
+                        <text x="100" y="85" font-family="Cormorant Garamond, serif" font-size="28" font-weight="bold" fill="#2C2728" text-anchor="middle" font-style="italic">Wallago</text>
+                        <text x="100" y="115" font-family="Plus Jakarta Sans, sans-serif" font-size="14" font-weight="bold" fill="#2C2728" text-anchor="middle" letter-spacing="3">COLLECTION</text>
+                        <text x="100" y="140" font-family="Plus Jakarta Sans, sans-serif" font-size="9" fill="#888" text-anchor="middle" letter-spacing="2">SINCE 2023</text>
+                    </svg>
+                    <span class="text-lg font-serif tracking-widest font-bold text-white uppercase">Wallago Collection</span>
+                </div>
                 <p class="text-xs leading-relaxed text-luxury-300">
-                    Haute couture portfolio & bespoke tailoring showcase. All inquiries and orders are personally handled via WhatsApp.
+                    Batik Clay Perak showcase. Handcrafted natural clay-resist batik and bespoke tailoring. All inquiries handled via WhatsApp.
                 </p>
             </div>
 
@@ -370,25 +388,25 @@
             </div>
 
             <div>
-                <h4 class="text-white font-semibold uppercase tracking-widest text-xs mb-4">WhatsApp Consultations</h4>
+                <h4 class="text-white font-semibold uppercase tracking-widest text-xs mb-4">WhatsApp Inquiries</h4>
                 <ul class="space-y-2 text-xs">
-                    <li><a href="javascript:void(0)" onclick="openWhatsApp('Sizing & Measurement Guide')" class="hover:text-luxury-accent transition-colors">Sizing & Measurements</a></li>
-                    <li><a href="javascript:void(0)" onclick="openWhatsApp('Book Private Tailor')" class="hover:text-luxury-accent transition-colors">Book Private Fitting</a></li>
-                    <li><a href="javascript:void(0)" onclick="openWhatsApp('Fabric Swatches Request')" class="hover:text-luxury-accent transition-colors">Fabric Swatches</a></li>
+                    <li><a href="javascript:void(0)" onclick="openWhatsApp('Kain Pasang Availability')" class="hover:text-luxury-accent transition-colors">Kain Pasang Stock</a></li>
+                    <li><a href="javascript:void(0)" onclick="openWhatsApp('Custom Tailoring Booking')" class="hover:text-luxury-accent transition-colors">Custom Tailoring</a></li>
+                    <li><a href="javascript:void(0)" onclick="openWhatsApp('Color Swatch Inquiry')" class="hover:text-luxury-accent transition-colors">Color Swatches</a></li>
                 </ul>
             </div>
 
             <div>
                 <h4 class="text-white font-semibold uppercase tracking-widest text-xs mb-4">Follow Official Instagram</h4>
-                <p class="text-xs mb-3 text-luxury-300">Follow for daily studio updates and behind-the-scenes Reels.</p>
+                <p class="text-xs mb-3 text-luxury-300">Follow for daily studio updates and new batik drops.</p>
                 <a href="https://instagram.com" target="_blank" class="inline-flex items-center gap-2 text-xs text-luxury-accent font-semibold tracking-widest uppercase hover:underline">
-                    <i class="fa-brands fa-instagram text-base"></i> @maisonvene
+                    <i class="fa-brands fa-instagram text-base"></i> @wallagocollection
                 </a>
             </div>
         </div>
 
         <div class="max-w-7xl mx-auto mt-12 pt-8 border-t border-luxury-800/60 flex flex-col sm:flex-row justify-between items-center text-xs gap-4">
-            <p>&copy; 2026 MAISON VÈNE. All rights reserved. Bespoke Portfolio.</p>
+            <p>&copy; 2026 Wallago Collection | Batik Clay Perak. All rights reserved.</p>
             <div class="flex gap-6">
                 <a href="https://instagram.com" target="_blank" class="hover:text-luxury-accent"><i class="fa-brands fa-instagram text-base"></i></a>
                 <a href="javascript:void(0)" onclick="openWhatsApp('Footer Inquiry')" class="hover:text-luxury-accent"><i class="fa-brands fa-whatsapp text-base"></i></a>
@@ -443,14 +461,14 @@
 
     <!-- JavaScript Data & Operations -->
     <script>
-        // Multi-Style Design Data Portfolio
+        // Multi-Style Design Data Portfolio for Wallago Collection
         const designData = [
             {
-                id: 'aurelia-gowns',
-                category: 'evening',
-                categoryLabel: 'Evening Gown',
-                title: 'Aurelia Draped Silk Gown',
-                desc: '100% pure Mulberry Silk evening gown featuring draped open-back detailing, hand-stitched lining, and customizable train length.',
+                id: 'batik-silk-pasang',
+                category: 'kain',
+                categoryLabel: 'Kain Pasang',
+                title: 'Perak Clay-Resist Silk Kain Pasang',
+                desc: 'Unstitched 4-meter pure silk fabric featuring authentic Perak clay-resist motifs, rich earthy color gradients, and luxurious drape.',
                 mainImg: 'https://images.unsplash.com/photo-1566174053879-31528523f8ae?auto=format&fit=crop&w=1000&q=80',
                 styles: [
                     'https://images.unsplash.com/photo-1566174053879-31528523f8ae?auto=format&fit=crop&w=1000&q=80',
@@ -458,127 +476,137 @@
                     'https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=1000&q=80'
                 ],
                 features: [
-                    'Multiple silk colorways (Emerald, Champagne, Midnight Black)',
-                    'Custom waist drape and hem height measurements',
-                    'Hand-finished invisible zipper & silk lining'
+                    'Standard 4-meter unstitched length for custom tailoring',
+                    'Natural riverbed clay-resist dyeing process from Perak',
+                    'Available in multiple earth-tone colorways upon request'
                 ]
             },
             {
-                id: 'midnight-suit',
-                category: 'bespoke',
-                categoryLabel: 'Bespoke Tailoring',
-                title: 'Midnight Velvet Double Blazer',
-                desc: 'Tailored sharp blazer crafted from plush Italian velvet with silk-lined lapels and hand-padded structured shoulders.',
+                id: 'modern-kurung',
+                category: 'batik',
+                categoryLabel: 'Bespoke Series',
+                title: 'Bespoke Modern Batik Kurung',
+                desc: 'Elegant modern kurung tailored with signature Batik Clay Perak fabric, featuring subtle gold thread accents and structured silhouette.',
                 mainImg: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1000&q=80',
                 styles: [
                     'https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1000&q=80',
                     'https://images.unsplash.com/photo-1617137984095-74e4e5e3613f?auto=format&fit=crop&w=1000&q=80'
                 ],
                 features: [
-                    'Choice of Peak or Satin Notch lapel styling',
-                    'Custom monogrammed interior silk lining',
-                    'Matching tailored trousers available upon request'
+                    'Custom tailored measurements provided via WhatsApp consultation',
+                    'Hand-finished hem and concealed back zip',
+                    'Exclusive clay-resist pattern placement'
                 ]
             },
             {
-                id: 'pleated-trench',
-                category: 'casual',
-                categoryLabel: 'Resort & Outerwear',
-                title: 'Pleated Oversized Trench Coat',
-                desc: 'High-density gabardine trench coat featuring architectural back pleating, storm flaps, and handcrafted horn buttons.',
-                mainImg: 'https://images.unsplash.com/photo-1551803091-e20673f15770?auto=format&fit=crop&w=1000&q=80',
+                id: 'mens-kemeja',
+                category: 'modern',
+                categoryLabel: 'Men\'s Attire',
+                title: 'Handcrafted Batik Kemeja',
+                desc: 'Sophisticated men\'s long-sleeve batik shirt crafted from breathable cotton silk featuring traditional Perak earth motifs.',
+                mainImg: 'https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=1000&q=80',
                 styles: [
-                    'https://images.unsplash.com/photo-1551803091-e20673f15770?auto=format&fit=crop&w=1000&q=80',
-                    'https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=1000&q=80'
+                    'https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=1000&q=80',
+                    'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1000&q=80'
                 ],
                 features: [
-                    'Water-resistant Italian cotton gabardine',
-                    'Adjustable belt & sleeve cuff straps',
-                    'Custom tailored sleeve and back length options'
+                    'Relaxed yet tailored fit for formal or casual wear',
+                    'Matched pattern pocket and button placket',
+                    'Available in sizes S to XXL with custom sizing options'
                 ]
             }
         ];
 
-        document.addEventListener('DOMContentLoaded', () => {
-            renderGallery('all');
-        });
-
-        // WhatsApp Direct Link Generator
-        function openWhatsApp(subject) {
-            const phoneNumber = "15550000000"; // Replace with your WhatsApp business number
-            const text = encodeURIComponent(`Hi MAISON VÈNE! I'd like to inquire about: ${subject}`);
-            window.open(`https://wa.me/${phoneNumber}?text=${text}`, '_blank');
-        }
-
-        // Gallery Filter Renderer
-        function renderGallery(filterCategory) {
+        // Render Gallery Cards
+        function renderGallery(filter = 'all') {
             const grid = document.getElementById('styleGalleryGrid');
-            const filtered = filterCategory === 'all' 
-                ? designData 
-                : designData.filter(d => d.category === filterCategory);
+            grid.innerHTML = '';
 
-            grid.innerHTML = filtered.map(item => `
-                <div class="bg-luxury-900 border border-luxury-800 rounded-xl overflow-hidden group flex flex-col justify-between transition-all hover:border-luxury-accent/50">
-                    <div>
-                        <div class="relative h-96 overflow-hidden bg-luxury-800 cursor-pointer" onclick="openModal('${item.id}')">
-                            <img src="${item.mainImg}" alt="${item.title}" class="w-full h-full object-cover img-zoom">
-                            <span class="absolute top-4 left-4 bg-luxury-900/80 backdrop-blur-md border border-luxury-accent/30 text-luxury-accent text-[10px] tracking-widest uppercase px-3 py-1 rounded">
-                                ${item.categoryLabel}
+            const filtered = filter === 'all' ? designData : designData.filter(d => d.category === filter);
+
+            filtered.forEach(item => {
+                const card = document.createElement('div');
+                card.className = 'group bg-luxury-800/40 border border-luxury-800 rounded-2xl overflow-hidden flex flex-col justify-between hover:border-luxury-accent/50 transition-all duration-300 cursor-pointer';
+                card.onclick = () => openModal(item.id);
+
+                card.innerHTML = `
+                    <div class="relative h-80 overflow-hidden bg-luxury-800">
+                        <img src="${item.mainImg}" alt="${item.title}" class="w-full h-full object-cover img-zoom">
+                        <span class="absolute top-4 left-4 bg-luxury-900/90 text-luxury-accent text-[10px] uppercase tracking-widest px-3 py-1 rounded-full font-semibold border border-luxury-accent/30 backdrop-blur-sm">
+                            ${item.categoryLabel}
+                        </span>
+                        <div class="absolute inset-0 bg-luxury-900/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <span class="bg-luxury-accent text-luxury-900 text-xs uppercase tracking-widest font-semibold px-5 py-2.5 rounded-full shadow-lg">
+                                View Styles & Inquire
                             </span>
-                            <div class="absolute top-4 right-4 bg-luxury-900/80 text-luxury-100 text-xs px-2.5 py-1 rounded-full backdrop-blur-md border border-luxury-800">
-                                <i class="fa-solid fa-camera mr-1 text-luxury-accent"></i> ${item.styles.length} Views
-                            </div>
-                        </div>
-
-                        <div class="p-6">
-                            <h3 class="font-serif text-xl text-white font-medium cursor-pointer hover:text-luxury-accent transition-colors" onclick="openModal('${item.id}')">${item.title}</h3>
-                            <p class="text-xs text-luxury-300 mt-2 line-clamp-2 font-light leading-relaxed">${item.desc}</p>
                         </div>
                     </div>
-
-                    <div class="px-6 pb-6 space-y-2">
-                        <button onclick="openModal('${item.id}')" class="w-full border border-luxury-800 text-luxury-200 hover:border-luxury-accent hover:text-luxury-accent text-xs uppercase tracking-widest py-3 rounded transition-colors">
-                            Explore Multi-Angle Gallery
-                        </button>
-                        <button onclick="openWhatsApp('Inquiry about design: ${item.title}')" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-xs uppercase tracking-widest py-3 rounded transition-colors flex items-center justify-center gap-2">
-                            <i class="fa-brands fa-whatsapp text-base"></i> Inquire via WhatsApp
-                        </button>
+                    <div class="p-6 flex flex-col flex-grow justify-between">
+                        <div>
+                            <h3 class="font-serif text-2xl text-white font-semibold mb-2 group-hover:text-luxury-accent transition-colors">${item.title}</h3>
+                            <p class="text-luxury-300 text-xs line-clamp-2 leading-relaxed mb-4">${item.desc}</p>
+                        </div>
+                        <div class="pt-4 border-t border-luxury-800 flex items-center justify-between text-xs">
+                            <span class="text-luxury-accent uppercase tracking-widest font-medium">Multi-Style Gallery</span>
+                            <span class="text-emerald-400 font-semibold flex items-center gap-1.5 uppercase tracking-wider">
+                                <i class="fa-brands fa-whatsapp text-sm"></i> WhatsApp Inquire
+                            </span>
+                        </div>
                     </div>
-                </div>
-            `).join('');
+                `;
+                grid.appendChild(card);
+            });
         }
 
+        // Filter functionality
         function filterGallery(category) {
             document.querySelectorAll('.filter-btn').forEach(btn => {
-                btn.classList.remove('active', 'bg-luxury-accent', 'text-luxury-900');
+                btn.classList.remove('active', 'bg-luxury-accent', 'text-luxury-900', 'border-luxury-accent');
                 btn.classList.add('text-luxury-200', 'border-luxury-800');
             });
-            event.target.classList.add('active', 'bg-luxury-accent', 'text-luxury-900');
-            event.target.classList.remove('text-luxury-200', 'border-luxury-800');
+            event.target.classList.add('active', 'bg-luxury-accent', 'text-luxury-900', 'border-luxury-accent');
             renderGallery(category);
         }
 
-        // Lightbox Functions
-        function openModal(designId) {
-            const item = designData.find(d => d.id === designId);
+        // Modal Controls
+        function openModal(id) {
+            const item = designData.find(d => d.id === id);
             if (!item) return;
 
             document.getElementById('modalCategory').textContent = item.categoryLabel;
             document.getElementById('modalTitle').textContent = item.title;
             document.getElementById('modalDescription').textContent = item.desc;
-            document.getElementById('modalMainImg').src = item.styles[0];
+            document.getElementById('modalMainImg').src = item.mainImg;
 
-            const thumbContainer = document.getElementById('modalThumbnails');
-            thumbContainer.innerHTML = item.styles.map((imgUrl, idx) => `
-                <button onclick="document.getElementById('modalMainImg').src='${imgUrl}'" class="w-20 h-20 flex-shrink-0 rounded-lg overflow-hidden border-2 border-luxury-800 hover:border-luxury-accent transition-colors">
-                    <img src="${imgUrl}" alt="Thumbnail ${idx}" class="w-full h-full object-cover">
-                </button>
-            `).join('');
+            // Features list
+            const featuresList = document.getElementById('modalFeatures');
+            featuresList.innerHTML = '';
+            item.features.forEach(f => {
+                const li = document.createElement('li');
+                li.textContent = f;
+                featuresList.appendChild(li);
+            });
 
-            const featureContainer = document.getElementById('modalFeatures');
-            featureContainer.innerHTML = item.features.map(f => `<li>${f}</li>`).join('');
+            // Thumbnails
+            const thumbsContainer = document.getElementById('modalThumbnails');
+            thumbsContainer.innerHTML = '';
+            item.styles.forEach((imgUrl, index) => {
+                const thumb = document.createElement('div');
+                thumb.className = `w-20 h-20 rounded-lg overflow-hidden border-2 cursor-pointer shrink-0 transition-all ${index === 0 ? 'border-luxury-accent' : 'border-luxury-800 opacity-60 hover:opacity-100'}`;
+                thumb.innerHTML = `<img src="${imgUrl}" alt="Thumbnail" class="w-full h-full object-cover">`;
+                thumb.onclick = (e) => {
+                    e.stopPropagation();
+                    document.getElementById('modalMainImg').src = imgUrl;
+                    thumbsContainer.querySelectorAll('div').forEach(t => t.classList.remove('border-luxury-accent'));
+                    thumb.classList.add('border-luxury-accent');
+                };
+                thumbsContainer.appendChild(thumb);
+            });
 
-            document.getElementById('modalWhatsAppBtn').onclick = () => openWhatsApp(`Design Inquiry: ${item.title}`);
+            // WhatsApp Modal Button
+            document.getElementById('modalWhatsAppBtn').onclick = () => {
+                openWhatsApp(`Inquiry regarding design: ${item.title}`);
+            };
 
             document.getElementById('designModal').classList.remove('hidden');
             document.body.style.overflow = 'hidden';
@@ -589,7 +617,13 @@
             document.body.style.overflow = 'auto';
         }
 
-        // Form Redirect
+        // WhatsApp Redirect Handler
+        function openWhatsApp(subject) {
+            const phoneNumber = "60123456789"; // Replace with actual Wallago Collection WhatsApp number if needed
+            const message = encodeURIComponent(`Hello Wallago Collection | Batik Clay Perak, I would like to inquire about: ${subject}.`);
+            window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
+        }
+
         function handleInquiryRedirect(event) {
             event.preventDefault();
             const name = document.getElementById('inquiryName').value;
@@ -597,15 +631,27 @@
             const design = document.getElementById('inquiryDesign').value;
             const message = document.getElementById('inquiryMessage').value;
 
-            const fullText = `Hi MAISON VÈNE! My name is ${name} (${phone}). Bespoke Inquiry for "${design}". Details: ${message}`;
-            window.open(`https://wa.me/15550000000?text=${encodeURIComponent(fullText)}`, '_blank');
+            const phoneNumber = "60123456789";
+            const text = encodeURIComponent(`Bespoke Inquiry - Wallago Collection:\n\nName: ${name}\nContact: ${phone}\nDesign Choice: ${design}\nNotes: ${message}`);
+            window.open(`https://wa.me/${phoneNumber}?text=${text}`, '_blank');
         }
 
-        // Mobile Navigation Drawer Toggle
-        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-        const mobileMenu = document.getElementById('mobileMenu');
-        mobileMenuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
-        document.querySelectorAll('.mobile-link').forEach(l => l.addEventListener('click', () => mobileMenu.classList.add('hidden')));
+        // Mobile Menu Toggle
+        document.getElementById('mobileMenuBtn').addEventListener('click', () => {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        });
+
+        document.querySelectorAll('.mobile-link').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('mobileMenu').classList.add('hidden');
+            });
+        });
+
+        // Initialize Portfolio Grid on Load
+        window.addEventListener('DOMContentLoaded', () => {
+            renderGallery('all');
+        });
     </script>
 </body>
 </html>
